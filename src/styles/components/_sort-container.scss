@@ -1,0 +1,30 @@
+.sort-container {
+  width: 100%;
+  background-color: $black;
+  height: 40px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  box-shadow:0 5px 5px 0 $grey, 2px 0 2px 0 $grey;
+}
+select {
+    border: 0;
+    position: relative;
+    margin-left: 160px;
+    width: 330px;
+    height: 100%;
+    line-height: 100%;
+    font-size: 1.4rem;;
+    background-color: $black;
+    color: $white;
+    appearance: $white;
+
+    option{
+     font-size: 1.5rem;
+     border-radius: 5%;
+   }
+}
+
+select:focus {
+  outline: none;
+}

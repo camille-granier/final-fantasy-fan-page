@@ -1,0 +1,18 @@
+@import url("//fonts.googleapis.com/css?family=Oswald");
+
+$font-1: Oswald, 'Noto sans', sans-serif;
+
+$white: #fcfefe;
+$black: #312b30;
+$yellow: #f8b500;
+$blue: #63aebb;
+$grey: #5c636e;
+
+
+body {
+  font-size: 20px;
+  margin: 0;
+  font-family: $font-1;
+  background-color: $white;
+  color: $black;
+}
