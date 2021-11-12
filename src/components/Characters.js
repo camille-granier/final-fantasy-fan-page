@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import axios from 'axios';
 import Card from './Card.js';
 
@@ -9,6 +9,25 @@ const Characters = () => {
   // eslint-disable-next-line
   const [selectedGame, setSelectedGame] = useState('');
   const games = ["All Games", "Final Fantasy I", "Final Fantasy BE", "Final Fantasy II", "Final Fantasy III", "Final Fantasy IV", "Final Fantasy V", "Final Fantasy VI", "Final Fantasy VII", "Final Fantasy VIII", "Final Fantasy IX", "Final Fantasy X", "Final Fantasy X-2", "Final Fantasy XII", "Final Fantasy XIII", "Final Fantasy XIII-2", "Final Fantasy XV"];
+  // eslint-disable-next-line
+  const [isActive, setIsActive] = useState(false)
+  // eslint-disable-next-line
+  const dropdownRef = useRef(null);
+
+  useEffect (() => {
+    const pageClickEvent = (e) => {
+      if (dropdownRef.current !== null && !dropdownRef.current.contains(e.target)) {
+        setIsActive(!isActive);
+      }
+    };
+    if(isActive) {
+      window.addEventListener('click', pageClickEvent);
+    }
+
+    return () => {
+      window.removeEventListener('click', pageClickEvent)
+    }
+  }, [isActive]);
 
   useEffect(() => {
     if (playOnce) {
@@ -20,17 +39,23 @@ const Characters = () => {
   return (
   <div className="characters">
     <div className="sort-container">
-      <select
-              name="game-select"
-              onChange={((e) => setSelectedGame(e.target.value))}>
-        {games.map((game) => {
-          return (
-            <option
+      <button className="menu-trigger" onClick= {((e) => setIsActive(true))}>
+      Choose game</button>
+      {
+        isActive
+      ? (
+        <div className={`menu ${isActive ? 'active' : 'inactive'}`}
+             ref={dropdownRef}>
+            {games.map((game) => {
+                return (
+                  <button
+                    className="menu-button"
+                    onClick={((e) => setSelectedGame(e.target.value))}
                     id={game.index}
-                    value={game}
-                    >{game}</option>
-                  )})}
-      </select>
+                    value={game}>
+                    {game}
+                  </button>)})}</div>)
+      :(null)}
     </div>
     <ul className="card-list">
       {(selectedGame === "All Games" || selectedGame === "")?

@@ -1,30 +1,49 @@
 .sort-container {
+  position: relative;
   width: 100%;
   background-color: $black;
   height: 40px;
   margin: 0;
-  display: flex;
-  align-items: center;
   box-shadow:0 5px 5px 0 $grey, 2px 0 2px 0 $grey;
+  overflow: visible;
+  display: flex;
 }
-select {
-    border: 0;
-    position: relative;
-    margin-left: 160px;
-    width: 330px;
-    height: 100%;
-    line-height: 100%;
-    font-size: 1.4rem;;
-    background-color: $black;
-    color: $white;
-    appearance: $white;
-
-    option{
-     font-size: 1.5rem;
-     border-radius: 5%;
-   }
+.menu-trigger {
+  margin-left: 150px;
+  background-color: $black;
+  color: $white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: none;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
-
-select:focus {
-  outline: none;
+.menu {
+  margin-top: 40px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin-left: 150px;
+  position: absolute;
+  visibility: hidden;
+}
+.menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+.menu-button {
+  background-color: $black;
+  color: $white;
+  height: 40px;
+  align-self: center;
+  padding-left: 10px;
+  font-size: 1.3rem;
+  border: none;
+  text-align: left;
+  width: 200px;
+  cursor: pointer;
+}
+.menu-trigger:hover {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
 }
