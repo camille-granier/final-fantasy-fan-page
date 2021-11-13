@@ -13,12 +13,10 @@
     margin-right: 50px;
     position: relative;
     text-decoration: none;
-  }
-  .nav-active {
     &::after {
       content:"";
-      width: 85%;
-      height: 5px;
+      width: 0%;
+      height: 4px;
       background: $yellow;
       position: absolute;
       bottom: -10px;
@@ -27,7 +25,33 @@
       border-radius: 2px;
     }
   }
+  .nav-active {
+    &::after {
+      content:"";
+      width: 90%;
+      height: 4px;
+      background: $yellow;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+  }
+  a:hover::after {
+        content:"";
+        width: 90%;
+        height: 4px;
+        background: $yellow;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2px;
+        transition: 0.5s ease all;
+  }
 }
+
 .logo {
 img {
   padding: 15px;

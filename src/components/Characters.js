@@ -40,7 +40,7 @@ const Characters = () => {
   <div className="characters">
     <div className="sort-container">
       <button className="menu-trigger" onClick= {((e) => setIsActive(true))}>
-      Choose game</button>
+      Choose game<div className="arrow"></div></button>
       {
         isActive
       ? (
