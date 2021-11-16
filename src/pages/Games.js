@@ -23,7 +23,7 @@ const Games = () => {
       <Logo />
       <Navigation />
     </div>
-    <div className="sort-container-g"></div>
+    <div className="sort-container"></div>
     <ul className="card-list">
       {data.map((game) => (<CardG game={game} key="game.gameId" url={game.picture} />))}
     </ul>

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect,useRef} from 'react';
 import Navigation from '../components/Navigation.js';
 import axios from 'axios';
 import CardC from '../components/CardC.js';
@@ -10,6 +10,24 @@ const Creatures = () => {
   // eslint-disable-next-line
   const [selectedGame, setSelectedGame] = useState('');
   const games = ["All Games", "Final Fantasy 01", "Final Fantasy BE", "Final Fantasy 02", "Final Fantasy 03", "Final Fantasy 04", "Final Fantasy 05", "Final Fantasy 06", "Final Fantasy 07", "Final Fantasy 08", "Final Fantasy 09", "Final Fantasy 10", "Final Fantasy 10-2", "Final Fantasy 12", "Final Fantasy 13", "Final Fantasy 13-2", "Final Fantasy 15"];
+  // eslint-disable-next-line
+  const [isActive, setIsActive] = useState(false);
+  // eslint-disable-next-line
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const pageClickEvent = (e) => {
+      if(dropdownRef.current !== null && !dropdownRef.current.contains(e.target)) {
+        setIsActive(!isActive)
+      }
+    }
+    if(isActive) {
+      window.addEventListener('click', pageClickEvent)
+    }
+    return () => {
+      window.removeEventListener('click', pageClickEvent)
+    }
+  }, [isActive]);
 
 
   useEffect(() => {
@@ -26,21 +44,30 @@ const Creatures = () => {
       <Navigation />
       </div>
     <div className="sort-container">
-    <select name="game-select"
-            onChange={((e) => setSelectedGame(e.target.value))}>
-      {games.map((game) => {
-        return (
-          <option id={game.index}
-                  value={game}
-                  >{game}</option>
-                )})}
-    </select>
+      <button className="menu-trigger"
+            onClick={((e) => setIsActive(true))}
+          >Choose Game<div className="arrow"></div>
+      </button>
+      {
+        isActive
+        ? (<div className={`menu ${isActive ? 'active' : 'inactive'}`}
+                ref={dropdownRef}>
+              {games.map((game) => {
+              return (
+              <button
+                className="menu-button"
+                onClick={((e) => setSelectedGame(e.target.value))}
+                id={game.index}
+                value={game}
+                >{game}
+              </button>)})}</div>)
+        :(null)}
     </div>
     <ul className="card-list">
       {(selectedGame === "All Games" || selectedGame === "")?
       data.map((crea) => (<CardC crea={crea} key="crea.monsterId" url={crea.picture} />))
       :
-        selectedGame === "Final Fantasy I"?
+        selectedGame === "Final Fantasy 01"?
           data
             .filter((crea) => (crea.game === "Final Fantasy"))
             .map((crea) => (<CardC crea={crea} key="crea.monsterId" url={crea.picture} />))
