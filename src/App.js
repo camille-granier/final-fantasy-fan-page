@@ -1,10 +1,10 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import Home from "./pages/Home.js";
-import About from "./pages/About.js";
-import NotFound from "./pages/NotFound.js";
-import Creatures from "./pages/Creatures.js";
-import Games from "./pages/Games.js"
+import Home from "./pages/Home";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
+import Creatures from "./pages/Creatures";
+import Games from "./pages/Games"
 
 function App() {
   return (

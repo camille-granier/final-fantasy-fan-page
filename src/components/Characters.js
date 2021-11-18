@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import axios from 'axios';
-import Card from './Card.js';
+import Card from './Card';
 
 const Characters = () => {
   const [data, setData] = useState([]);

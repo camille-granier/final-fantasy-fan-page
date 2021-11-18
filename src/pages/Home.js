@@ -1,7 +1,7 @@
 import React from 'react';
-import Navigation from '../components/Navigation.js';
-import Characters from '../components/Characters.js';
-import Logo from '../components/Logo.js'
+import Navigation from '../components/Navigation';
+import Characters from '../components/Characters';
+import Logo from '../components/Logo'
 
 const Home = () => (
   <div className="home">

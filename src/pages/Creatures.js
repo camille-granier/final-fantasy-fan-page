@@ -1,8 +1,8 @@
 import React, {useState, useEffect,useRef} from 'react';
-import Navigation from '../components/Navigation.js';
+import Navigation from '../components/Navigation';
 import axios from 'axios';
-import CardC from '../components/CardC.js';
-import Logo from '../components/Logo.js';
+import CardC from '../components/CardC';
+import Logo from '../components/Logo';
 const Creatures = () => {
   const [data, setData] = useState([]);
   // eslint-disable-next-line

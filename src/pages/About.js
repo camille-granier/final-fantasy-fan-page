@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from '../components/Navigation.js';
-import Logo from '../components/Logo.js';
+import Navigation from '../components/Navigation';
+import Logo from '../components/Logo';
 
 const About = () => (
   <div>

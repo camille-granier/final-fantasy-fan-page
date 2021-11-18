@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import Navigation from '../components/Navigation.js';
+import Navigation from '../components/Navigation';
 import axios from 'axios';
-import CardG from '../components/CardG.js';
-import Logo from '../components/Logo.js';
+import CardG from '../components/CardG';
+import Logo from '../components/Logo';
 
 const Games = () => {
   const [data, setData] = useState([]);
