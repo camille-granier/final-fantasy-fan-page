@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import axios from 'axios';
 import Card from './Card';
+import LoadingSpinner from '../UI/Loadingspinner';
 
 const Characters = () => {
   const [data, setData] = useState([]);
@@ -8,11 +9,12 @@ const Characters = () => {
   const [playOnce, setPlayOnce] = useState(true);
   // eslint-disable-next-line
   const [selectedGame, setSelectedGame] = useState('');
-  const games = ["All Games", "Final Fantasy I", "Final Fantasy BE", "Final Fantasy II", "Final Fantasy III", "Final Fantasy IV", "Final Fantasy V", "Final Fantasy VI", "Final Fantasy VII", "Final Fantasy VIII", "Final Fantasy IX", "Final Fantasy X", "Final Fantasy X-2", "Final Fantasy XII", "Final Fantasy XIII", "Final Fantasy XIII-2", "Final Fantasy XV"];
+  const [isLoading, setIsLoading] = useState(true);
   // eslint-disable-next-line
   const [isActive, setIsActive] = useState(false)
   // eslint-disable-next-line
   const dropdownRef = useRef(null);
+  const games = ["All Games", "Final Fantasy I", "Final Fantasy BE", "Final Fantasy II", "Final Fantasy III", "Final Fantasy IV", "Final Fantasy V", "Final Fantasy VI", "Final Fantasy VII", "Final Fantasy VIII", "Final Fantasy IX", "Final Fantasy X", "Final Fantasy X-2", "Final Fantasy XII", "Final Fantasy XIII", "Final Fantasy XIII-2", "Final Fantasy XV"];
 
   useEffect (() => {
     const pageClickEvent = (e) => {
@@ -33,7 +35,8 @@ const Characters = () => {
     if (playOnce) {
     axios
         .get('https://www.moogleapi.com/api/v1/characters')
-        .then(res => {setData(res.data)})}
+        .then(res => {setData(res.data)})
+        .then(res => setIsLoading(false))}
   }, [data, playOnce]);
 
   return (
@@ -57,6 +60,7 @@ const Characters = () => {
                   </button>)})}</div>)
       :(null)}
     </div>
+    {isLoading && <LoadingSpinner />}
     <ul className="card-list">
       {(selectedGame === "All Games" || selectedGame === "")?
         data.map((char) => (<Card char={char} key="char.id" url={(char.pictures).map((x) => (x.url))} />))
