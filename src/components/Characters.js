@@ -63,16 +63,16 @@ const Characters = () => {
     {isLoading && <LoadingSpinner />}
     <ul className="card-list">
       {(selectedGame === "All Games" || selectedGame === "")?
-        data.map((char) => (<Card char={char} key="char.id" url={(char.pictures).map((x) => (x.url))} />))
+        data.map((char) => (<Card char={char} key="char.id" url={char.pictures.length === 0 ? "./img/final-fantasy.jpg" : (char.pictures).map((x) => (x.url))} />))
         :
         selectedGame === "Final Fantasy I"?
         data
         .filter((char) => (char.origin === "Final Fantasy"))
-        .map((char) => (<Card char={char} key="char.id" url={(char.pictures).map((x) => (x.url))} />))
+        .map((char) => (<Card char={char} key="char.id" url={char.pictures.length === 0 ? "./img/final-fantasy.jpg" : (char.pictures).map((x) => (x.url))} />))
         :
         data
           .filter((char) => char.origin === selectedGame)
-          .map((char) => (<Card char={char} key="char.id" url={(char.pictures).map((x) => (x.url))} />))}
+          .map((char) => (<Card char={char} key="char.id" url={char.pictures.length === 0 ? "./img/final-fantasy.jpg" : char.pictures.map((x) => (x.url))} />))}
     </ul>
   </div>
 )};
