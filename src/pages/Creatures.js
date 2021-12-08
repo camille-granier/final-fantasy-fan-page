@@ -70,7 +70,7 @@ const Creatures = () => {
     {isLoading && <LoadingSpinner />}
     <ul className="card-list">
       {(selectedGame === "All Games" || selectedGame === "")?
-      data.map((crea) => (<CardC crea={crea} key="crea.monsterId" url={crea.picture} />))
+      data.map((crea) => (<CardC crea={crea} key="crea.monsterId" url={crea.picture ? crea.picture : "./img/final-fantasy.jpg"} />))
       :
         selectedGame === "Final Fantasy 01"?
           data
