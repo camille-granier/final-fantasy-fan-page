@@ -24,6 +24,11 @@
     &:hover {
       transition: 0.3s;
       transform: scale(1.1);
+<<<<<<< HEAD
+=======
+      z-index: 2;
+      opacity: 1;
+>>>>>>> 650a1aba27482996039a60368f2a90879f52ad15
       visibility: visible;
     }
     li {
