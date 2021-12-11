@@ -1,9 +1,9 @@
 .card-list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: 90px;
-  margin-left: 195px;
   padding-top: 50px;
+  margin-left: 195px;
+  margin-right: 90px;
 }
 
 .card {
@@ -24,11 +24,6 @@
     &:hover {
       transition: 0.3s;
       transform: scale(1.1);
-<<<<<<< HEAD
-=======
-      z-index: 2;
-      opacity: 1;
->>>>>>> 650a1aba27482996039a60368f2a90879f52ad15
       visibility: visible;
     }
     li {
@@ -38,9 +33,21 @@
       object-fit: cover;
     }
 }
+
 img {
   text-align: center;
   object-fit: contain;
   height: 120px;
   width: 120px;
+}
+
+@media screen and (max-width: 1300px) {
+  .card {
+    height: 250px;
+    width: 200px;
+  }
+  .card-list {
+    margin-left: 150px;
+    margin-right: 40px;
+  }
 }
