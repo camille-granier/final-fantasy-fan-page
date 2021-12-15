@@ -5,12 +5,13 @@ const CardG = ({game, url}) => {
   let description = "";
 
   if (game.description !== null) {
-     let arr = game.description.split('.', 3);
-     if (!arr[2]) {
-       description = description = arr[0] + "." + arr[1] + "."; 
-     } else {
-     description = arr[0] + "." + arr[1] + "." + arr[2] + ".";
-     }
+    let arr = game.description.split(".", 2);
+
+    if (!game.description[1]) {
+      description = arr[0] + ".";
+    } else {
+      description = arr[0] + "." + arr[1] + ".";
+    } 
   }
 
   return (
