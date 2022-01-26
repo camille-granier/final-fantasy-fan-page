@@ -2,16 +2,15 @@
   position: relative;
   width: 100%;
   background-color: $white;
-  height: 40px;
+  height: 30px;
   margin: 0;
-  box-shadow:0 3px 3px 0 $grey, 2px 0 2px 0 $grey;
   overflow: visible;
   display: flex;
 }
 .menu-trigger {
   margin-left: 210px;
   background-color: $white;
-  color: $black;
+  color: $white;
   font-size: 1.3rem;
   cursor: pointer;
   border: none;
@@ -36,7 +35,7 @@
 }
 .menu-button {
   background-color: $black;
-  color: $black;
+  color: $white;
   height: 40px;
   align-self: center;
   padding-left: 10px;
@@ -51,7 +50,7 @@
   color: $black;
 }
 .menu-trigger:hover {
-  border: solid 2px $black;
+  border: solid 2px $white;
   transform: translateY(2%);
 }
 
