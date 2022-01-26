@@ -1,8 +1,7 @@
 import React, {useState, useEffect,useRef} from 'react';
-import Navigation from '../components/Navigation';
+import Header from '../components/Header';
 import axios from 'axios';
 import CardC from '../components/CardC';
-import Logo from '../components/Logo';
 import LoadingSpinner from '../UI/Loadingspinner';
 
 const Creatures = () => {
@@ -43,10 +42,7 @@ const Creatures = () => {
 
   return (
   <div className="creatures">
-    <div className="header">
-      <Logo />
-      <Navigation />
-      </div>
+    <Header />
     <div className="sort-container">
       <button className="menu-trigger"
             onClick={((e) => setIsActive(true))}

@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import Navigation from '../components/Navigation';
+import Header from '../components/Header';
 import axios from 'axios';
 import CardG from '../components/CardG';
-import Logo from '../components/Logo';
 import LoadingSpinner from '../UI/Loadingspinner';
 
 const Games = () => {
@@ -22,10 +21,7 @@ const Games = () => {
 
   return (
   <div className="games">
-    <div className="header">
-      <Logo />
-      <Navigation />
-    </div>
+    <Header />
     <div className="sort-container"></div>
     {isLoading && <LoadingSpinner />}
     <ul className="card-list">

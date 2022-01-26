@@ -1,7 +1,7 @@
 .sort-container {
   position: relative;
   width: 100%;
-  background-color: $black;
+  background-color: $white;
   height: 40px;
   margin: 0;
   box-shadow:0 3px 3px 0 $grey, 2px 0 2px 0 $grey;
@@ -10,8 +10,8 @@
 }
 .menu-trigger {
   margin-left: 210px;
-  background-color: $black;
-  color: $white;
+  background-color: $white;
+  color: $black;
   font-size: 1.3rem;
   cursor: pointer;
   border: none;
@@ -36,7 +36,7 @@
 }
 .menu-button {
   background-color: $black;
-  color: $white;
+  color: $black;
   height: 40px;
   align-self: center;
   padding-left: 10px;
@@ -47,11 +47,11 @@
   border-radius: 3px;
 }
 .menu-button:hover {
-  background-color: $white;
+  background-color: $yellow;
   color: $black;
 }
 .menu-trigger:hover {
-  border: solid 2px $white;
+  border: solid 2px $black;
   transform: translateY(2%);
 }
 
@@ -59,6 +59,7 @@
   position: absolute;
 }
 .arrow {
+  color: $black;
   width: 10px;
   height: 10px;
   top: 50%;
