@@ -1,6 +1,10 @@
 .line {
+  display: flex;
   color: $white;
   background-color: $black;
+  height: 7vh;
+  max-height: 40px;
+  align-items: center;
 }
 
 .header {
@@ -8,11 +12,10 @@
 }
 
 .navigation {
-  margin-top: 10px;
+  margin-top: 0px;
   margin-left: 30px;
-  padding: 50px;
+  padding: 20px;
   display: flex;
-  justify-content: flex-end;
   font-size: 2rem;
   a {
     color: $black;
@@ -25,7 +28,7 @@
       height: 4px;
       background: $yellow;
       position: absolute;
-      bottom: -10px;
+      bottom: 10px;
       left: 50%;
       transform: translateX(-50%);
       border-radius: 2px;
@@ -38,7 +41,7 @@
       height: 4px;
       background: $yellow;
       position: absolute;
-      bottom: -10px;
+      bottom: 10px;
       left: 50%;
       transform: translateX(-50%);
       border-radius: 2px;
@@ -50,7 +53,7 @@
         height: 4px;
         background: $yellow;
         position: absolute;
-        bottom: -10px;
+        bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
         border-radius: 2px;
@@ -61,10 +64,10 @@
 .logo {
 img {
   padding: 15px;
-  margin-top: 17px;
-  margin-left: 20px;
-  width: 90px;
-  height: 90px;
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 70px;
+  height: 70px;
 }
 }
 
