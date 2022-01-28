@@ -11,7 +11,7 @@
 
 .flip-card {
     
-    margin: 10px;
+    margin: 15px;
     border-radius: 1%;
     height: 300px;
     width: 250px;
@@ -47,6 +47,12 @@
   list-style-type: none;
   border-top: 2px solid;
   border-image: linear-gradient( 90deg, #e8751a, #f8da5b, #f8da5b, #e8751a)2;
+    ul {
+      margin-top: 10px;
+      padding-left: 25px;
+      padding-right: 25px;
+      text-align: center;
+    }
     li {
       list-style-type: none;
     }

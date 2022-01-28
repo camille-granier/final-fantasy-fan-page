@@ -1,13 +1,9 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Logo from '../components/Logo';
+import Header from '../components/Header';
 
 const About = () => (
   <div>
-    <div className="header">
-      <Logo />
-      <Navigation />
-    </div>
+    <Header />
   <div className="about">
     <h1>About</h1>
     <br/>
