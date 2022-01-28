@@ -25,7 +25,7 @@ const Games = () => {
     <div className="sort-container"></div>
     {isLoading && <LoadingSpinner />}
     <ul className="card-list">
-      {data.map((game) => (<CardG game={game} key="game.gameId" url={game.picture ? game.picture : "./img/final-fantasy.jpg"} />))}
+      {data.map((game) => (<CardG game={game} key="game.gameId" url={game.picture} />))}
     </ul>
   </div>
 )};

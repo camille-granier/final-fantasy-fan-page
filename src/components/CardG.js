@@ -18,10 +18,11 @@ const CardG = ({game, url}) => {
     <div className='flip-card'>
     <div className='flip-card-inner'>
     <li className="flip-card-front" key={game.index}>
-      <img className="game-picture" src={url} alt="game-pic" />
-      <ul>
-       <li>{game.title}</li>
-     </ul>
+      {game.gameId === "8f24fe1b-0e23-47c3-bca1-08d712cd7324"
+      ? <ul>
+          <li>{game.title}</li>
+        </ul>
+      : <img className="game-picture" src={url} alt="game-pic" />}
     </li>
     <div className="flip-card-back">
       {game.description === null
