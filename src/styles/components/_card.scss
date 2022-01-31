@@ -67,9 +67,11 @@ img {
 }
 .game-picture {
   object-fit: contain;
-
 }
 
+.game-title {
+  text-decoration: underline;
+}
 .flip-card-back {
   transform: rotateY(180deg);
   align-items: center;
