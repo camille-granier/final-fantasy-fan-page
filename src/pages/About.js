@@ -5,8 +5,6 @@ const About = () => (
   <div>
     <Header />
   <div className="about">
-    <h1>About</h1>
-    <br/>
     <p>A react project by Camille Granier, using the wonderful
       <a href="https://www.moogleapi.com/"
          target="_blank"
