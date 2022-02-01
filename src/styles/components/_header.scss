@@ -13,6 +13,7 @@
 
 .header {
   display: flex;
+  font-size: 15px;
 }
 
 .navigation {
@@ -20,7 +21,6 @@
   margin-left: 30px;
   padding: 20px;
   display: flex;
-  font-size: 2rem;
   a {
     color: $black;
     margin-right: 50px;
