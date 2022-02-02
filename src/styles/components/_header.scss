@@ -9,6 +9,9 @@
   height: 7vh;
   max-height: 40px;
   align-items: center;
+  font-size: 1.4rem;
+  line-height: 0px;
+  padding: 2px 15px;
 }
 
 .header {
@@ -18,20 +21,21 @@
 .navigation {
   margin-top: 0px;
   margin-left: 0px;
-  padding: 15px 15px;
-  height: 50px;
+  padding: 10px 15px;
+  height: 45px;
   display: flex;
   background-color: white;
   width: 100%;
   a {
     color: $black;
+    font-size: 1.6rem;
     margin-right: 50px;
     position: relative;
     text-decoration: none;
     &::after {
       content:"";
       width: 0%;
-      height: 4px;
+      height: 2px;
       background: $yellow;
       position: absolute;
       bottom: 2px;
@@ -44,7 +48,7 @@
     &::after {
       content:"";
       width: 90%;
-      height: 4px;
+      height: 2px;
       background: $yellow;
       position: absolute;
       bottom: 2px;
@@ -56,7 +60,7 @@
   a:hover::after {
         content:"";
         width: 90%;
-        height: 4px;
+        height: 2px;
         background: $yellow;
         position: absolute;
         bottom: 2px;
@@ -69,11 +73,11 @@
 
 .logo {
 img {
-  padding: 15px;
+  padding: 10px 15px;
   margin-top: 0px;
   margin-left: 0px;
   width: 70px;
-  height: 50px;
+  height: 45px;
   background-color: white;
 }
 }
