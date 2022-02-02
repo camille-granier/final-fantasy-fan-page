@@ -10,7 +10,7 @@ const About = () => (
          target="_blank"
          rel='noreferrer'
          className="link"
-         >MoogleApi</a></span>
+         >MoogleApi</a></span>.
     </p>
     </div>
   </div>
