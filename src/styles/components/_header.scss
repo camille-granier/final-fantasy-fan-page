@@ -4,7 +4,7 @@
 }
 .line {
   display: flex;
-  color: $white;
+  color: white;
   background-color: $black;
   height: 7vh;
   max-height: 40px;
@@ -13,14 +13,16 @@
 
 .header {
   display: flex;
-  font-size: 15px;
 }
 
 .navigation {
   margin-top: 0px;
-  margin-left: 30px;
-  padding: 20px;
+  margin-left: 0px;
+  padding: 15px 15px;
+  height: 60px;
   display: flex;
+  background-color: white;
+  width: 100%;
   a {
     color: $black;
     margin-right: 50px;
@@ -71,7 +73,8 @@ img {
   margin-top: 0px;
   margin-left: 0px;
   width: 70px;
-  height: 70px;
+  height: 60px;
+  background-color: white;
 }
 }
 

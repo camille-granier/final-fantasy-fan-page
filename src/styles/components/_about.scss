@@ -1,22 +1,23 @@
 .about {
-  margin: 15px;
+  margin: 15px 70px;
+  padding: 1vh;
+  border-radius: .5rem;
+  background-color: $grey2;
+ 
   p {
     width: 100vh;
     margin-left: auto;
     margin-right: auto;
-    font-family: "Raleway";
-    letter-spacing: .05px;
+    font-family: $font-2;
+ 
+    font-size: 1rem;
   a {
   text-decoration: none;
   color: $blue;
+  font-weight: bold;
   }
   a:hover {
     text-decoration: underline;
    }
   }
-}
-.about-background {
-  background-color: $grey2;
-  padding: 3vh;
-  border-radius: .5rem;
 }
