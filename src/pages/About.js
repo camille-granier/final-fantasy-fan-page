@@ -13,6 +13,7 @@ const About = () => (
          >MoogleApi</a></span>.
     </p>
     </div>
+    <Contact />
   </div>
 );
 
