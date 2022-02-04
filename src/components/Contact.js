@@ -11,14 +11,30 @@ const Contact = () => {
     formState: { errors }
   } = useForm();
 
+  
+  
   const onSubmit = async (data) => {
     const { name, email, subject, message } = data;
 
-    console.log('Name: ', name);
-    console.log('Email: ', email);
-    console.log('Subject: ', subject);
-    console.log('Message: ', message);
-  }
+    try{
+      const templateParams = {
+        name,
+        email,
+        subject,
+        message
+      };
+
+      await emailjs.send(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        templateParams,
+        process.env.REACT_APP_USER_ID
+      );
+      reset();
+    } catch(e) {
+      console.log(e);
+    }
+  };
 
 
     return (
