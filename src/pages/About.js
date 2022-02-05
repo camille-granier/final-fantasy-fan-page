@@ -5,13 +5,15 @@ import Contact from '../components/Contact';
 const About = () => (
   <div>
     <Header />
-  <div className="about">
-    <p><span className='about-background'>A react project by Camille Granier, using the wonderful <a href="https://www.moogleapi.com/"
+  <div className='about-container'>
+    <div className="about">
+      <p><span className='about-background'>A react project by Camille Granier, using the wonderful <a href="https://www.moogleapi.com/"
          target="_blank"
          rel='noreferrer'
          className="link"
          >MoogleApi</a></span>.
-    </p>
+      </p>
+     </div>
     </div>
     <Contact />
   </div>

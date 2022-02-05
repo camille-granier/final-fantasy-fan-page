@@ -1,6 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 const Contact = () => {
 
@@ -11,8 +13,21 @@ const Contact = () => {
     formState: { errors }
   } = useForm();
 
+  //Notify user onsubmit
+  const toastifySuccess = () => {
+    toast('Form sent!', {
+      position: 'bottom-right',
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,  
+      draggable: false,
+      className: 'submit-feedback success',
+      toastId: 'notifyToast'
+    });
+  };
   
-  
+
   const onSubmit = async (data) => {
     const { name, email, subject, message } = data;
 
@@ -31,6 +46,7 @@ const Contact = () => {
         process.env.REACT_APP_USER_ID
       );
       reset();
+      toastifySuccess();
     } catch(e) {
       console.log(e);
     }
@@ -40,6 +56,7 @@ const Contact = () => {
     return (
         <div className='contact-form'>
           <div className='container'>
+              <h1>Get in touch</h1>
               <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
                   <div className='form-line-1'>
                       <input
@@ -103,6 +120,7 @@ const Contact = () => {
                   </button>
               </form>
           </div>
+          <ToastContainer />
         </div>
     );
 };

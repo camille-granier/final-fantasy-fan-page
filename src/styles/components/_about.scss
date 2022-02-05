@@ -1,8 +1,13 @@
+.about-container {
+  display: flex;
+  justify-content: center;
+  margin: 170px 0px 60px 0px; 
+}
 .about {
   display: flex;
   justify-content: center;
-  margin: 150px 70px 40px 70px;
-  padding: 1vh;
+  margin: 0px 50px;
+  padding: 1vh 40vh;
   border-radius: .5rem;
   background-color: $grey2;
   max-width: 60rem;
