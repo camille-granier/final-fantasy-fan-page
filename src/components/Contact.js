@@ -55,7 +55,7 @@ const Contact = () => {
 
     return (
         <div className='contact-form'>
-          <div className='container'>
+          <div className='form-container'>
               <h1>Get in touch</h1>
               <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
                   <div className='form-line-1'>
@@ -119,7 +119,7 @@ const Contact = () => {
                     >Submit
                   </button>
               </form>
-          </div>
+            </div>
           <ToastContainer />
         </div>
     );
