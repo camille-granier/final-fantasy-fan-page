@@ -98,13 +98,14 @@ const Contact = () => {
                             message: 'Subject can not exceed 75 characters'
                           }
                         })}
-                        placeholder='Subject'>
+                        placeholder='Subject'
+                        className='subject'>
                       </input>
                       {errors.subject && (<span className='error-message'>{errors.subject.message}</span>)}
                   </div>
                   <div className='form-line-3'>
                       <textarea
-                        rows={3}
+                        rows={4}
                         name="message"
                         {...register('message', {
                           required: true

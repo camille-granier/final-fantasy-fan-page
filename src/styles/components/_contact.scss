@@ -1,5 +1,52 @@
-.form-container {
+.contact-form {
     display: flex;
     justify-content: center;
-    background-color: red;
+  
+}
+.form-container {
+    padding: 60px;
+    background-color: $grey2;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-2;
+        font-size: 1.1rem;
+    h1 {
+        padding-top: 0px;
+        padding-bottom: 30px;
+        margin: 0px;
+        text-align: center;
+        font-family: $font-2;
+    }
+    input {
+        padding: 5px;
+        margin: 10px;
+        width: 13vw;
+        font-size: 1.1rem;
+        font-family: $font-2;
+    }
+    textarea {
+        padding: 5px;
+        margin: 10px;
+        width: 30vw;
+        font-size: 1.1rem;
+        font-family: $font-2;
+    }
+    .subject {
+        padding: 5px;
+        margin: 10px;
+        width: 30vw;
+    }
+    .form-button {
+        margin: 15px 10px;
+        width: 15vw;
+        padding: 5px;
+        font-size: 1.1rem;
+        font-family: $font-2;
+        align-self: center;
+    }
+    .form-line-1 {
+        display: flex;
+        justify-content: space-between;
+    }
 }

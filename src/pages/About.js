@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Contact from '../components/Contact';
 
 const About = () => (
-  <div>
+  <div className='about-page'>
     <Header />
   <div className='about-container'>
     <div className="about">
