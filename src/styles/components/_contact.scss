@@ -7,10 +7,12 @@
     padding: 60px;
     background-color: $grey2;
     border-radius: .5rem;
+    form {
     display: flex;
     flex-direction: column;
     font-family: $font-2;
-        font-size: 1.1rem;
+    font-size: 1.1rem;
+    }
     h1 {
         padding-top: 0px;
         padding-bottom: 30px;
@@ -21,21 +23,36 @@
     input {
         padding: 5px;
         margin: 10px;
-        width: 13vw;
+        width: 18vw;
         font-size: 1.1rem;
         font-family: $font-2;
+        border-top: hidden;
+        border-left: hidden;
+        border-right: hidden;
+        border-bottom: .1vw solid black;
+        background-color: $grey2;
+    }
+    input:focus {
+        outline: none;
     }
     textarea {
         padding: 5px;
         margin: 10px;
-        width: 30vw;
+        width: 40vw;
         font-size: 1.1rem;
         font-family: $font-2;
+        resize: none;
+        border-radius: .1rem;
+    }
+    textarea:focus {
+        outline: none;
     }
     .subject {
         padding: 5px;
         margin: 10px;
-        width: 30vw;
+        width: 40vw;
+        border-radius: .1rem;
+        margin-bottom: 50px;
     }
     .form-button {
         margin: 15px 10px;
@@ -44,6 +61,7 @@
         font-size: 1.1rem;
         font-family: $font-2;
         align-self: center;
+        border-radius: .1rem;
     }
     .form-line-1 {
         display: flex;
