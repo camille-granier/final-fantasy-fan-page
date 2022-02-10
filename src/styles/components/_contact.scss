@@ -1,12 +1,12 @@
 .contact-form {
     display: flex;
     justify-content: center;
-  
 }
 .form-container {
-    padding: 60px;
+    padding: 60px 8vw;
     background-color: $grey2;
     border-radius: .5rem;
+    max-width: 45vw;
     form {
     display: flex;
     flex-direction: column;
@@ -61,7 +61,12 @@
         font-size: 1.1rem;
         font-family: $font-2;
         align-self: center;
-        border-radius: .1rem;
+        border: 1px solid black;
+        border-radius: .3rem;
+    }
+    .form-button:hover {
+        background-color: #5c636e;
+        color: white;
     }
     .form-line-1 {
         display: flex;
