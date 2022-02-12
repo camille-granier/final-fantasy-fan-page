@@ -59,6 +59,7 @@ const Contact = () => {
               <h1>Get in touch</h1>
               <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
                   <div className='form-line-1'>
+                    <div className='input-container'>
                       <input
                         type='text'
                         name='name'
@@ -74,6 +75,8 @@ const Contact = () => {
                         placeholder='Name'>
                       </input>
                       {errors.name && (<span className='error-message'>{errors.name.message}</span>)}
+                    </div>
+                    <div className='input-container'>
                       <input
                         type='email'
                         name='email'
@@ -85,7 +88,8 @@ const Contact = () => {
                       </input>
                       {errors.email && (<span className='error-message'>Please enter a valid email address</span>)}
                   </div>
-                  <div className='form-line-2'>
+                  </div>
+                  <div className='form-line-2 input-container'>
                       <input
                         type='text'
                         name='subject'
@@ -103,7 +107,7 @@ const Contact = () => {
                       </input>
                       {errors.subject && (<span className='error-message'>{errors.subject.message}</span>)}
                   </div>
-                  <div className='form-line-3'>
+                  <div className='form-line-3 input-container'>
                       <textarea
                         rows={4}
                         name="message"

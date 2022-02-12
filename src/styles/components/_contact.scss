@@ -22,7 +22,7 @@
     }
     input {
         padding: 5px;
-        margin: 10px;
+        margin: 25px 10px;
         width: 18vw;
         font-size: 1.1rem;
         font-family: $font-2;
@@ -72,4 +72,8 @@
         display: flex;
         justify-content: space-between;
     }
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
 }
