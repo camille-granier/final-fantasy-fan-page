@@ -22,7 +22,7 @@
     }
     input {
         padding: 5px;
-        margin: 25px 10px 5px 10px;
+        margin: 25px 10px 15px 10px;
         width: 18vw;
         font-size: 1.1rem;
         font-family: $font-2;
@@ -37,7 +37,7 @@
     }
     textarea {
         padding: 5px;
-        margin: 5px 10px;
+        margin: 25px 10px;
         width: 40vw;
         font-size: 1.1rem;
         font-family: $font-2;
@@ -49,7 +49,7 @@
     }
     .subject {
         padding: 5px;
-        margin: 5px 10px;
+        margin: 15px 10px 20px 10px;
         width: 40vw;
         border-radius: .1rem;
     }
@@ -80,6 +80,6 @@
 .error-message {
     font-size: .9rem;
     color: $red;
-    margin: 5px 0px 20px 10px;
+    margin: -15px 5px;
     padding: 5px;
 }
