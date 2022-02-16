@@ -1,7 +1,12 @@
 @import url("//fonts.googleapis.com/css?family=Oswald");
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Raleway:wght@100;300;400&display=swap');
+@font-face  {
+  font-family: 'FinalFantasy-aa4m';
+  src: local('FinalFantasy-aa4m'), 
+  url('../fonts/FinalFantasy-aa4m.ttf') format('truetype');
+}
 
-$font-1: Oswald, 'Noto sans', sans-serif;
+$font-1: 'FinalFantasy-aa4m', Oswald, 'Noto sans', sans-serif;
 $font-2: 'Raleway', sans-serif;
 
 $white: #f5f5efec;
@@ -11,7 +16,6 @@ $blue: #0092ca;
 $grey: #5c636e;
 $grey2: #e3e3e3;
 $red: #dc2f2f;
-
 
 body {
   font-size: 20px;
