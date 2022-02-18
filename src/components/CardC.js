@@ -20,7 +20,7 @@ const CardC = ({crea, url}) => {
     <li className="flip-card-front" key={crea.index}>
       <img src={url} alt="creature-pic" />
       <ul>
-       <li>{crea.name}</li>
+       <li>{crea.name.toUpperCase()}</li>
        <li>{crea.game}</li>
      </ul>
     </li>

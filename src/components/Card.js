@@ -18,7 +18,7 @@ const Card = ({char, url, des}) => {
       <li className="flip-card-front" key={char.index}>
         <img src={url} alt="char-pic" />
          <ul>
-           <li>{char.name}</li>
+           <li>{char.name.toUpperCase()}</li>
             {(/[^?]/.test(char.age)? <li>Age: {char.age}</li>:"")}
            <li>{char.origin}</li>
         </ul>

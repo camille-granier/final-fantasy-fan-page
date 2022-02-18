@@ -42,7 +42,7 @@
 
 .flip-card-front {
   color: black;
-  font-family: $font-1;
+  font-family: $font-3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,6 +78,7 @@ img {
   text-decoration: underline;
 }
 .flip-card-back {
+  font-family: $font-3;
   transform: rotateY(180deg);
   align-items: center;
   box-shadow: 0 5px 5px 0 $grey, 2px 0 2px 0 $grey;
