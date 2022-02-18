@@ -121,7 +121,7 @@ const Contact = () => {
                   <button 
                     className='form-button'
                     type='submit'
-                    >Submit
+                    >SUBMIT
                   </button>
               </form>
             </div>
