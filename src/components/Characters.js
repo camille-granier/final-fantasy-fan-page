@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import axios from 'axios';
 import Card from './Card';
 import LoadingSpinner from '../UI/Loadingspinner';
+import MenuScroll from './MenuScroll';
 
 const Characters = () => {
   const [data, setData] = useState([]);
@@ -41,6 +42,8 @@ const Characters = () => {
 
   return (
   <div className="characters">
+    <MenuScroll />
+    {/*sort container
     <div className="sort-container">
       <button className="menu-trigger" onClick= {((e) => setIsActive(true))}>
       Choose game<div className="arrow"></div></button>
@@ -59,7 +62,7 @@ const Characters = () => {
                     {game}
                   </button>)})}</div>)
       :(null)}
-    </div>
+                </div>*/}
     {isLoading && <LoadingSpinner />}
     <ul className="card-list">
       {(selectedGame === "All Games" || selectedGame === "")?
