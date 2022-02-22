@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import axios from 'axios';
 import GameButton from './GameButton';
 
