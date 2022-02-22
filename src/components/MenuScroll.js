@@ -23,7 +23,7 @@ const MenuScroll = () => {
     return (
         <div>
             <div>
-                {games.map((x) => (
+                {data.map((x) => (
                     <GameButton game={x} key={x} url={x.picture}/>
                 ))}
             </div>
