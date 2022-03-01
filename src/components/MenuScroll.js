@@ -11,6 +11,8 @@ const MenuScroll = () => {
   // eslint-disable-next-line
   const [playOnce, setPlayOnce] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
+  const [scrollX, setScrollX] = useState(0);
+  const [scrollEnd, setScrollEnd] = useState(false)
   const ref = useRef(0);
 
 
@@ -24,21 +26,38 @@ const MenuScroll = () => {
 
   const slide = (shift) => {
     ref.current.scrollLeft += shift;
-  };
+    setScrollX(scrollX + shift);
+
+  if (Math.floor(ref.current.scrollWidth - ref.current.scrollLeft <= ref.current.offsetWidth)) {
+      setScrollEnd(true)
+  } else {
+      setScrollEnd(false);
+  }
+};
+
+  const scrollCheck = () => {
+    setScrollX(ref.current.scrollLeft);
+    if (Math.floor(ref.current.scrollWidth - ref.current.scrollLeft <= ref.current.offsetWidth)) {
+        setScrollEnd(true);
+    } else {
+        setScrollEnd(false);
+    }
+;}
+
 
     return (
             <div className='scroll-menu'>
-                <button className='prev' onClick={() => slide(-300)}>
+                {scrollX !==0 && <button className='prev' onClick={() => slide(-350)}>
                     <FaAngleLeft />
-                </button>
-                <div  ref={ref} className='button-container'>
+                </button>}
+                <div  ref={ref} onScroll={scrollCheck} className='button-container'>
                 {data.map((game) => (
                     <GameButton game={game} key={game.gameId} url={game.picture}/>
                 ))}
                  </div>
-                 <button className='next' onClick={() => slide(+300)}>
+                 {!scrollEnd && <button className='next' onClick={() => slide(+350)}>
                      <FaAngleRight/>
-                </button>
+                </button>}
            </div>
     
     );

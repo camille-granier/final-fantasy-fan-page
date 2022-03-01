@@ -1,6 +1,7 @@
 .scroll-menu {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -46,4 +47,16 @@
 .button-title {
     text-align: center;
 
+}
+.prev {
+    height: 35px;
+    width: 20px;
+    border: none;
+    cursor: pointer;
+}
+.next {
+    height: 35px;
+    width: 20px;
+    border: none;
+    cursor: pointer;
 }
