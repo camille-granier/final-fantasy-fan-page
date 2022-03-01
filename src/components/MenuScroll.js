@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import axios from 'axios';
 import GameButton from './GameButton';
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const MenuScroll = () => {
 
@@ -10,6 +11,7 @@ const MenuScroll = () => {
   // eslint-disable-next-line
   const [playOnce, setPlayOnce] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
+  const ref = useRef(0);
 
 
   useEffect(() => {
@@ -20,14 +22,25 @@ const MenuScroll = () => {
         .then(res => setIsLoading(false))}
   }, [data, playOnce]);
 
+  const slide = (shift) => {
+    ref.current.scrollLeft += shift;
+  };
+
     return (
-        <div>
-            <div>
-                {data.map((x) => (
-                    <GameButton game={x} key={x} url={x.picture}/>
+            <div className='scroll-menu'>
+                <button className='prev' onClick={() => slide(-300)}>
+                    <FaAngleLeft />
+                </button>
+                <div  ref={ref} className='button-container'>
+                {data.map((game) => (
+                    <GameButton game={game} key={game.gameId} url={game.picture}/>
                 ))}
-            </div>
-        </div>
+                 </div>
+                 <button className='next' onClick={() => slide(+300)}>
+                     <FaAngleRight/>
+                </button>
+           </div>
+    
     );
 };
 

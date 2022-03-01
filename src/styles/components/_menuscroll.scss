@@ -1,3 +1,49 @@
+.scroll-menu {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.button-container {
+    padding: 0px;
+    margin: 0px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    height: 80px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.button-container::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+.button-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
 .game-button {
-   
+    padding: 0px;
+    margin: 0px;
+    height: 60px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.picture-button {
+    padding: 10px;
+    margin: 0px;
+    height: 35px;
+    width: 150px;
+    object-fit: contain;
+    text-align: center;
+}
+
+.button-title {
+    text-align: center;
+
 }
