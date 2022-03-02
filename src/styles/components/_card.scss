@@ -1,7 +1,7 @@
 .card-list {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 50px;
+  padding-top: 90px;
   padding-left: 100px;
   padding-right: 100px;
   margin-left: auto;
@@ -69,6 +69,10 @@ img {
   text-align: center;
   object-fit: contain;
   padding: 0px;
+}
+
+.game-picture-brave {
+  object-fit: cover;
 }
 
 .game-title {

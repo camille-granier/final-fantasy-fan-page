@@ -14,12 +14,13 @@ $blue: #0092ca;
 $grey: #5c636e;
 $grey2: #e3e3e3;
 $red: #dc2f2f;
+$background: #f7f7f7;
 
 body {
   font-size: 20px;
-  margin: 120px 0px;
+  margin: 107px 0px;
   font-family: $font-1;
-  background-color: #f7f7f7;
+  background-color: $background;
   color: $black;
   box-sizing: border-box;
 }

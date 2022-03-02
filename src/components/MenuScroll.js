@@ -1,18 +1,17 @@
 import React, {useState, useEffect, useRef} from 'react';
 import axios from 'axios';
-import GameButton from './GameButton';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const MenuScroll = () => {
 
-    const games = ["All Games", "Final Fantasy I", "Final Fantasy BE", "Final Fantasy II", "Final Fantasy III", "Final Fantasy IV", "Final Fantasy V", "Final Fantasy VI", "Final Fantasy VII", "Final Fantasy VIII", "Final Fantasy IX", "Final Fantasy X", "Final Fantasy X-2", "Final Fantasy XII", "Final Fantasy XIII", "Final Fantasy XIII-2", "Final Fantasy XV"];
+    const games = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "X-2", "XII", "XIII", "XIII-2", "XV"];
     
     const [data, setData] = useState([]);
   // eslint-disable-next-line
   const [playOnce, setPlayOnce] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
   const [scrollX, setScrollX] = useState(0);
-  const [scrollEnd, setScrollEnd] = useState(false)
+  const [scrollEnd, setScrollEnd] = useState(false);
+  const [selectedGame, setSelectedGame] = useState('');
   const ref = useRef(0);
 
 
@@ -20,8 +19,7 @@ const MenuScroll = () => {
     if (playOnce) {
     axios
         .get('https://www.moogleapi.com/api/v1/games')
-        .then(res => {setData(res.data)})
-        .then(res => setIsLoading(false))}
+        .then(res => {setData(res.data)})}
   }, [data, playOnce]);
 
   const slide = (shift) => {
@@ -51,9 +49,29 @@ const MenuScroll = () => {
                     <FaAngleLeft />
                 </button>}
                 <div  ref={ref} onScroll={scrollCheck} className='button-container'>
+                    <button className='game-button' 
+                            value="All Games">
+                                <img className='picture-button' 
+                                     src="../../img/final-fantasy.jpg" 
+                                     alt="game-logo" />
+                    </button>
                 {data.map((game) => (
-                    <GameButton game={game} key={game.gameId} url={game.picture}/>
-                ))}
+                    <button 
+                        className='game-button'
+                        value=
+                        {game.gameId === "8f24fe1b-0e23-47c3-bca1-08d712cd7324"
+                        ? "Final Fantasy BE"
+                        : `Final Fantasy ${games[data.indexOf(game)]}`
+                        }>
+                        <img 
+                            className='picture-button'
+                            alt='game-logo'
+                            src=
+                        {game.gameId === "8f24fe1b-0e23-47c3-bca1-08d712cd7324"
+                        ? "../../img/ffbrave.jpg"
+                        : game.picture
+                        }/>
+                    </button>))}
                  </div>
                  {!scrollEnd && <button className='next' onClick={() => slide(+350)}>
                      <FaAngleRight/>
