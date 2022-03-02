@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Card from './Card';
 import LoadingSpinner from '../UI/Loadingspinner';
@@ -14,23 +14,11 @@ const Characters = () => {
   // eslint-disable-next-line
   const [isActive, setIsActive] = useState(false)
   // eslint-disable-next-line
-  const dropdownRef = useRef(null);
-  const games = ["All Games", "Final Fantasy I", "Final Fantasy BE", "Final Fantasy II", "Final Fantasy III", "Final Fantasy IV", "Final Fantasy V", "Final Fantasy VI", "Final Fantasy VII", "Final Fantasy VIII", "Final Fantasy IX", "Final Fantasy X", "Final Fantasy X-2", "Final Fantasy XII", "Final Fantasy XIII", "Final Fantasy XIII-2", "Final Fantasy XV"];
 
-  useEffect (() => {
-    const pageClickEvent = (e) => {
-      if (dropdownRef.current !== null && !dropdownRef.current.contains(e.target)) {
-        setIsActive(!isActive);
-      }
-    };
-    if(isActive) {
-      window.addEventListener('click', pageClickEvent);
-    }
-
-    return () => {
-      window.removeEventListener('click', pageClickEvent)
-    }
-  }, [isActive]);
+  const ChangeGame = (e) => {
+    setSelectedGame(e);
+    console.log(selectedGame)
+  }
 
   useEffect(() => {
     if (playOnce) {
@@ -42,7 +30,7 @@ const Characters = () => {
 
   return (
   <div className="characters">
-    <MenuScroll />
+    <MenuScroll ChangeGame={ChangeGame}/>
     {/*sort container
     <div className="sort-container">
       <button className="menu-trigger" onClick= {((e) => setIsActive(true))}>

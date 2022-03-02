@@ -2,7 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import axios from 'axios';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
-const MenuScroll = () => {
+const MenuScroll = ({ChangeGame}) => {
 
     const games = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "X-2", "XII", "XIII", "XIII-2", "XV"];
     
@@ -11,7 +11,6 @@ const MenuScroll = () => {
   const [playOnce, setPlayOnce] = useState(true);
   const [scrollX, setScrollX] = useState(0);
   const [scrollEnd, setScrollEnd] = useState(false);
-  const [selectedGame, setSelectedGame] = useState('');
   const ref = useRef(0);
 
 
@@ -49,29 +48,31 @@ const MenuScroll = () => {
                     <FaAngleLeft />
                 </button>}
                 <div  ref={ref} onScroll={scrollCheck} className='button-container'>
-                    <button className='game-button' 
-                            value="All Games">
-                                <img className='picture-button' 
-                                     src="../../img/final-fantasy.jpg" 
-                                     alt="game-logo" />
-                    </button>
+                    <input className='game-button' 
+                            type="image"
+                            onClick={((e) => ChangeGame(e.target.value))}
+                            src="../../img/final-fantasy.jpg"  
+                            value="All Games"
+                            alt="game-logo">
+                    </input>
                 {data.map((game) => (
-                    <button 
+                    <input 
                         className='game-button'
+                        onClick={((e) => ChangeGame(e.target.value))}
+                        key={game.gameId}
+                        type="image"
                         value=
                         {game.gameId === "8f24fe1b-0e23-47c3-bca1-08d712cd7324"
                         ? "Final Fantasy BE"
                         : `Final Fantasy ${games[data.indexOf(game)]}`
-                        }>
-                        <img 
-                            className='picture-button'
+                        }
                             alt='game-logo'
                             src=
                         {game.gameId === "8f24fe1b-0e23-47c3-bca1-08d712cd7324"
                         ? "../../img/ffbrave.jpg"
                         : game.picture
-                        }/>
-                    </button>))}
+                        }>
+                    </input>))}
                  </div>
                  {!scrollEnd && <button className='next' onClick={() => slide(+350)}>
                      <FaAngleRight/>
