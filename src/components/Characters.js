@@ -31,26 +31,6 @@ const Characters = () => {
   return (
   <div className="characters">
     <MenuScroll ChangeGame={ChangeGame}/>
-    {/*sort container
-    <div className="sort-container">
-      <button className="menu-trigger" onClick= {((e) => setIsActive(true))}>
-      Choose game<div className="arrow"></div></button>
-      {
-        isActive
-      ? (
-        <div className={`menu ${isActive ? 'active' : 'inactive'}`}
-             ref={dropdownRef}>
-            {games.map((game) => {
-                return (
-                  <button
-                    className="menu-button"
-                    onClick={((e) => setSelectedGame(e.target.value))}
-                    id={game.index}
-                    value={game}>
-                    {game}
-                  </button>)})}</div>)
-      :(null)}
-                </div>*/}
     {isLoading && <LoadingSpinner />}
     <ul className="card-list">
       {(selectedGame === "All Games" || selectedGame === "")?

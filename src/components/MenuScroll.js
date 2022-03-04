@@ -9,6 +9,7 @@ const MenuScroll = ({ChangeGame}) => {
     const [data, setData] = useState([]);
   // eslint-disable-next-line
   const [playOnce, setPlayOnce] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [scrollX, setScrollX] = useState(0);
   const [scrollEnd, setScrollEnd] = useState(false);
   const ref = useRef(0);
@@ -18,7 +19,8 @@ const MenuScroll = ({ChangeGame}) => {
     if (playOnce) {
     axios
         .get('https://www.moogleapi.com/api/v1/games')
-        .then(res => {setData(res.data)})}
+        .then(res => {setData(res.data)})
+        .then(res => {setIsLoading(false)})}
   }, [data, playOnce]);
 
   const slide = (shift) => {
@@ -43,12 +45,13 @@ const MenuScroll = ({ChangeGame}) => {
 
 
     return (
+    
             <div className='scroll-menu'>
                 {scrollX !==0 && <button className='prev' onClick={() => slide(-350)}>
                     <FaAngleLeft />
                 </button>}
                 <div  ref={ref} onScroll={scrollCheck} className='button-container'>
-                    <input className='game-button' 
+                    <input className={isLoading ? 'loading-button' : 'game-button'}
                             type="image"
                             onClick={((e) => ChangeGame(e.target.value))}
                             src="../../img/final-fantasy.jpg"  
@@ -57,7 +60,7 @@ const MenuScroll = ({ChangeGame}) => {
                     </input>
                 {data.map((game) => (
                     <input 
-                        className='game-button'
+                        className={isLoading ? 'hidden-button' : 'game-button'}
                         onClick={((e) => ChangeGame(e.target.value))}
                         key={game.gameId}
                         type="image"

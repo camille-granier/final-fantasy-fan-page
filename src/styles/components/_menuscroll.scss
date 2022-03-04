@@ -9,7 +9,7 @@
     z-index: 1;
     background-color: white;
     border-top: 1px solid;
-  border-image: linear-gradient( 90deg, #e8751a, #f8da5b, #f8da5b, #e8751a)2;
+    border-image: linear-gradient( 90deg, #e8751a, #f8da5b, #f8da5b, #e8751a)2;
 }
 .button-container {
     padding: 0px;
@@ -61,4 +61,34 @@
     border: none;
     cursor: pointer;
     background-color: white;
+}
+
+.loading-button {
+    justify-self: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0px;
+    height: 35px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    padding: 10px 30px;
+    width: 180px;
+    object-fit: contain;
+    text-align: center;
+    animation: button 1s infinite ease;
+}
+
+@keyframes button {
+    0%{opacity: 0}
+    50%{opacity: 1}
+    100%{opacity: 0}
+}
+
+.hidden-button {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
 }
