@@ -3,6 +3,8 @@ import Header from '../components/Header';
 import axios from 'axios';
 import CardC from '../components/CardC';
 import LoadingSpinner from '../UI/Loadingspinner';
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
+
 
 const Creatures = () => {
   const [data, setData] = useState([]);
@@ -43,28 +45,14 @@ const Creatures = () => {
   return (
   <div className="creatures">
     <Header />
-    <div className="sort-container">
-      <button className="menu-trigger"
-            onClick={((e) => setIsActive(true))}
-          >Choose Game<div className="arrow"></div>
-      </button>
-      {
-        isActive
-        ? (<div className={`menu ${isActive ? 'active' : 'inactive'}`}
-                ref={dropdownRef}>
-              {games.map((game) => {
-              return (
-              <button
-                className="menu-button"
-                onClick={((e) => setSelectedGame(e.target.value))}
-                id={game.index}
-                value={game}
-                >{game}
-              </button>)})}</div>)
-        :(null)}
+    <div className='quote'>
+    <FaQuoteLeft size={14}/>
+    <p className='quote-text'><em>Kweh!</em></p>
+    <FaQuoteRight size={14} />
     </div>
+    <p className='author'>-Present Day Chocobos</p>
     {isLoading && <LoadingSpinner />}
-    <ul className="card-list">
+    <ul className="card-list-below-quote">
       {(selectedGame === "All Games" || selectedGame === "")?
       data.map((crea) => (<CardC crea={crea} key="crea.monsterId" url={crea.picture ? crea.picture : "./img/final-fantasy.jpg"} />))
       :

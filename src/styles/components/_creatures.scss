@@ -1,0 +1,44 @@
+.quote {
+    display: flex;
+    flex-direction: row;
+    font-family: $font-2;
+    justify-content: center;
+    align-items: center;
+}
+
+.author {
+    font-family: $font-2;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.quote-text {
+    padding: 50px 10px 10px 10px;
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+.card-list-below-quote {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .author-name {
+      font-weight: bold;
+  }
+
+  @media screen and (max-width: 1300px) {
+    .card-list-below-quote {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
