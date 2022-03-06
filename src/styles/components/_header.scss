@@ -5,7 +5,9 @@
   position: fixed;
   margin-top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
+  border-bottom: 1px solid;
+  border-image: linear-gradient( 90deg, #e8751a, #f8da5b, #f8da5b, #e8751a)2;
 }
 .line {
   display: flex;
@@ -23,6 +25,7 @@
   display: flex;
   margin-bottom: 0px;
   padding-bottom: 0px;
+  background-color: white;
 }
 
 .navigation {
@@ -31,6 +34,7 @@
   padding: 10px 15px;
   height: 45px;
   display: flex;
+  flex-wrap: wrap;
   background-color: white;
   width: 100%;
   a {
@@ -89,8 +93,113 @@ img {
 }
 }
 
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: $black;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+ 
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
 @media screen and (max-width: 1300px) {
   .navigation {
     font-size: 1.8rem;
   }
+}
+
+@media (max-width: 700px) {
+
+  .header {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .menu-button-container {
+    display: flex;
+    padding-right: 35px;
+  }
+
+  .navigation {
+    display: none;
+    opacity: 0.95;
+    margin: 0px;
+    padding: 0px;
+    height: 0px;
+    a {
+    height: 0px;
+    margin: 0px;
+    padding: 0.4em 0;
+    width: 100%;
+    color: black;
+    background-color: white;
+    text-align: center;
+    }
+    .nav-active {
+      &::after {
+        width: 10%;
+        height: 1px;
+        bottom: 8px;
+      }
+    }
+  }
+
+  #menu-toggle:checked ~ .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 5;
+    height: auto;
+    border-top: 1px solid;
+    border-image: linear-gradient( 90deg, #e8751a, #f8da5b, #f8da5b, #e8751a)2;
+    a {
+      height: auto;
+      transition: height 6s ease;
+    }
+  }
+  
 }

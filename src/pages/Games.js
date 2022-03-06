@@ -25,7 +25,7 @@ const Games = () => {
     <Header />
     <div className='quote'>
     <FaQuoteLeft size={14}/>
-    <p className='quote-text'><em>I don't have what it takes to make an action game. I think I'm better at telling a story</em></p>
+    <p className='quote-text'><em>" I don't have what it takes to make an action game. I think I'm better at telling a story </em></p>
     <FaQuoteRight size={14} />
     </div>
     <p className='author'><span className='author-name'>-Hironobu Sakaguchi,</span> creator of the Final Fantasy series</p>
