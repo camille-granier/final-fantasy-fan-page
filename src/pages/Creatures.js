@@ -3,8 +3,6 @@ import Header from '../components/Header';
 import axios from 'axios';
 import CardC from '../components/CardC';
 import LoadingSpinner from '../UI/Loadingspinner';
-import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
-
 
 const Creatures = () => {
   const [data, setData] = useState([]);
@@ -46,9 +44,7 @@ const Creatures = () => {
   <div className="creatures">
     <Header />
     <div className='quote'>
-    <FaQuoteLeft size={14}/>
-    <p className='quote-text'><em>Kweh!</em></p>
-    <FaQuoteRight size={14} />
+    <p className='quote-text'><em>" Kweh! "</em></p>
     </div>
     <p className='author'>-Present Day Chocobos</p>
     {isLoading && <LoadingSpinner />}

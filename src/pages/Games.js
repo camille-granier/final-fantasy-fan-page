@@ -3,7 +3,6 @@ import Header from '../components/Header';
 import axios from 'axios';
 import CardG from '../components/CardG';
 import LoadingSpinner from '../UI/Loadingspinner';
-import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 
 const Games = () => {
   const [data, setData] = useState([]);
@@ -24,9 +23,7 @@ const Games = () => {
   <div className="games">
     <Header />
     <div className='quote'>
-    <FaQuoteLeft size={14}/>
-    <p className='quote-text'><em>" I don't have what it takes to make an action game. I think I'm better at telling a story </em></p>
-    <FaQuoteRight size={14} />
+    <p className='quote-text'><em>" I don't have what it takes to make an action game. I think I'm better at telling a story "</em></p>
     </div>
     <p className='author'><span className='author-name'>-Hironobu Sakaguchi,</span> creator of the Final Fantasy series</p>
     {isLoading && <LoadingSpinner />}
