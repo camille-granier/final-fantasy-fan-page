@@ -11,6 +11,7 @@
 }
 .line {
   display: flex;
+  justify-content: space-between;
   color: white;
   background-color: $black;
   height: 7vh;
@@ -18,7 +19,17 @@
   align-items: center;
   font-size: 1.4rem;
   line-height: 0px;
-  padding: 2px 15px;
+  padding: 2px 30px;
+}
+
+.icon {
+  text-decoration: none;
+  color: white;
+}
+
+.icon:hover {
+  color: $yellow;
+  box-shadow: 0 0 15px $yellow;
 }
 
 .header {
