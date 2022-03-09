@@ -8,10 +8,11 @@
   display: flex;
   justify-content: center;
   margin: 0px;
-  padding: 1vh 7vw;
+  padding: 1vh 6vw;
   border-radius: .3rem;
-  max-width: 45vw;
+  max-width: 50vw;
   p {
+    text-align: center;
     font-family: $font-2;
     font-size: 1.1rem;
   a {
@@ -23,4 +24,20 @@
     text-decoration: underline;
    }
   }
+}
+
+@media screen and (max-width: 1000px) {
+    .about {
+      padding: .7vh 2vw;
+      max-width: 75vw;  
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .about-container {
+    margin: 20px 15px;
+  }
+    .about {
+      padding: 30px 0px;
+    }
 }

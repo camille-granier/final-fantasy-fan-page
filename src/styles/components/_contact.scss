@@ -3,7 +3,7 @@
     justify-content: center;
 }
 .form-container {
-    padding: 50px 6vw;
+    padding: 40px 6vw;
     background-color: white;
     border-radius: .3rem;
     max-width: 45vw;
@@ -34,19 +34,24 @@
     }
     input:focus {
         outline: none;
+        border-bottom: 1px solid;
+        border-image: linear-gradient( 90deg, #e8751a, #f8da5b, #f8da5b, #e8751a)2;
     }
     textarea {
         padding: 5px;
-        margin: 25px 10px;
+        margin: 25px 10px 20px 10px;
         width: 40vw;
         font-size: 1.1rem;
         font-family: $font-2;
         resize: none;
-        border: .5px solid black;
+        border: none;
+        border-bottom: .5px solid black;
         border-radius: .1rem;
     }
     textarea:focus {
         outline: none;
+        border-bottom: 1px solid;
+        border-image: linear-gradient( 90deg, #e8751a, #f8da5b, #f8da5b, #e8751a)2;
     }
     .subject {
         padding: 5px;
@@ -75,14 +80,77 @@
         justify-content: space-between;
     }
 }
-.input-container {
-    display: flex;
-    flex-direction: column;
-}
 
 .error-message {
     font-size: .9rem;
     color: $red;
     margin: -15px 5px;
     padding: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+    .form-container {
+        max-width: 70vw;
+        padding: 40px 13vw;
+    }
+    .form-line-1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-container {
+
+        input {
+        width: 100%;
+        margin: 20px 0px;
+        padding: 5px 0px;
+    }
+        .subject {
+            width: 100%;
+            margin: 20px 0px;
+            padding: 5px 0px;
+        }
+      textarea {
+        margin: 20px 0px;
+        padding: 5px 0px;
+        width: 100%;
+      }
+
+      .error-message-textarea {
+          padding: 0px 5px 15px 5px;
+          margin: -15px 5px 10px 5px;
+          width: 100%;
+      }
+      .form-line-3 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .form-container {
+        max-width: 100%;
+        width: 100%;
+        padding: 10px 40px;
+        margin: 0px 20px;
+        textarea {
+            margin: 20px 0px;
+            padding: 5px 0px;
+            width: 100%;
+        }
+        .form-button {
+            margin: 15px 10px;
+            width: 50%;
+            padding: 10px;
+            font-size: 1.1rem;
+            font-family: $font-2;
+            align-self: center;
+            color: white;
+            background-color: $blue;
+            border: none;
+            border-radius: .3rem;
+        }
+    }
 }

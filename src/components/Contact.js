@@ -84,7 +84,7 @@ const Contact = () => {
                           required: true,
                           pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
                         })}
-                        placeholder='Email address'>
+                        placeholder='Email'>
                       </input>
                       {errors.email && (<span className='error-message'>Please enter a valid email address</span>)}
                   </div>
@@ -114,9 +114,9 @@ const Contact = () => {
                         {...register('message', {
                           required: true
                         })}
-                        placeholder='Leave your message here'>
+                        placeholder='Message'>
                       </textarea>
-                      {errors.message && (<span className='error-message'>Please enter a message</span>)}
+                      {errors.message && (<span className='error-message error-message-textarea'>Please enter a message</span>)}
                   </div>
                   <button 
                     className='form-button'
