@@ -1,16 +1,17 @@
 .quote {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0px 20px;
 }
 
 .author {
     font-family: $font-2;
     font-size: 1rem;
     text-align: center;
-    padding: 0px;
-    margin: 0px;
+    padding: 0px 10px;
+    margin: 0px 10px;
 }
 
 .quote-text {
@@ -18,6 +19,7 @@
     margin: 10px;
     font-size: 1.3rem;
     font-family: $quote;
+    text-align: center;
 }
 
 .card-list-below-quote {
@@ -40,5 +42,27 @@
     .card-list-below-quote {
       padding-left: 50px;
       padding-right: 50px;
+    }
+    .quote {
+      margin: 0px 100px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .card-list-below-quote {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .quote {
+      margin: 0px 10px;
+    }
+
+    .author {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    .quote-text {
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
