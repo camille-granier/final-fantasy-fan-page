@@ -56,7 +56,12 @@ const Contact = () => {
     return (
         <div className='contact-form'>
           <div className='form-container'>
-              <h2>Get in touch</h2>
+              <div className='form-header'>
+                <h2>Get in touch</h2>
+                <img 
+                  src="./img/moogle-mail.jpg"
+                  alt="moogle"/>
+              </div>
               <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
                   <div className='form-line-1'>
                     <div className='input-container'>
