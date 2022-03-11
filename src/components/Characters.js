@@ -3,6 +3,7 @@ import axios from 'axios';
 import Card from './Card';
 import LoadingSpinner from '../UI/Loadingspinner';
 import MenuScroll from './MenuScroll';
+import Footer from './Footer';
 
 const Characters = () => {
   const [data, setData] = useState([]);
@@ -63,6 +64,7 @@ const Characters = () => {
           ? "./img/final-fantasy.jpg" 
           : char.pictures.map((x) => (x.url))} />))}
     </ul>
+    {!isLoading && <Footer />}
   </div>
 )};
 

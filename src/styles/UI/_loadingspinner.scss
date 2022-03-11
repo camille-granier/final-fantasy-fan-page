@@ -1,7 +1,12 @@
+.loading-spinner-container {
+  
+}
 .lds-ripple {
+  margin: 150px 100px;
+  padding: 100px;
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 80px;
   height: 80px;
@@ -32,3 +37,4 @@
     opacity: 0;
   }
 }
+

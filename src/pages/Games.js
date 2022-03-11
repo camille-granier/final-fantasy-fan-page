@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import axios from 'axios';
 import CardG from '../components/CardG';
 import LoadingSpinner from '../UI/Loadingspinner';
+import Footer from '../components/Footer';
 
 const Games = () => {
   const [data, setData] = useState([]);
@@ -30,6 +31,7 @@ const Games = () => {
     <ul className="card-list-below-quote">
       {data.map((game) => (<CardG game={game} key={game.gameId} url={game.picture} />))}
     </ul>
+    {!isLoading && <Footer />}
   </div>
 )};
 

@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import axios from 'axios';
 import CardC from '../components/CardC';
 import LoadingSpinner from '../UI/Loadingspinner';
+import Footer from '../components/Footer';
 
 const Creatures = () => {
   const [data, setData] = useState([]);
@@ -61,6 +62,7 @@ const Creatures = () => {
             .filter((crea) => crea.game === selectedGame)
             .map((crea) => (<CardC crea={crea} key="crea.monsterId" url={crea.picture} />))}
     </ul>
+    {!isLoading && <Footer />}
   </div>
 )};
 
