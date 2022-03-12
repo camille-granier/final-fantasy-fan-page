@@ -1,14 +1,39 @@
 .footer {
     margin: 20px;
     padding: 5px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: $font-2;
     font-size: 1rem;
     text-align: center;
+    p, a {
+        text-decoration: none;
+        padding: 0px 10px;
+        color: black;
+        .title-link {
+            padding: 0px;
+        }
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+ }
+
+ .copyright {
+    border-right: solid $grey 1px;
+}
+
+ .privacy-policy {
+     border-left: solid $grey 1px;
+     border-right: solid $grey 1px;
  }
 
 @media screen and (max-width: 700px) {
     .footer {
         margin: 10px;
+        p, a {
+            padding: 0px 5px;
+        }
     }
 }
