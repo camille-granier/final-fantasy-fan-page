@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom';
 import './styles/index.scss';
 import App from './App';
 import dotenv from "dotenv";
+import { BrowserRouter } from 'react-router-dom';
 import './styles/fonts/FinalFantasy.ttf';
 
 require('dotenv').config();
 
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <App />
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById('root')
 );

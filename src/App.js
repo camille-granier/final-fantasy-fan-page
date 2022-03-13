@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
@@ -8,15 +8,15 @@ import Games from "./pages/Games"
 
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/Creatures" component={Creatures} />
-        <Games exact path="/Games" component={Games} />
-        <Route exact path="/About" component={About} />
-        <Route component={NotFound} />
-      </Switch>
-    </BrowserRouter>
+    <div className='app'>
+      <Routes>
+        <Route exact path="/" element={ <Home/> } />
+        <Route exact path="/Creatures" element={ <Creatures/> } />
+        <Route exact path="/Games" element={ <Games/> } />
+        <Route exact path="/About" element={ <About/> } />
+        <Route element={ <NotFound/> } />
+      </Routes>
+    </div>
   );
 }
 
