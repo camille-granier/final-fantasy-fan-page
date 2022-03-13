@@ -17,7 +17,7 @@ const CardC = ({crea, url}) => {
   return (
   <div className='flip-card'>
     <div className='flip-card-inner'>
-    <li className="flip-card-front" key={crea.index}>
+    <li className="flip-card-front" key={crea.monsterId}>
       <img src={url} alt="creature-pic" />
       <ul>
        <li>{crea.name.toUpperCase()}</li>
