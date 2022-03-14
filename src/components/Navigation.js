@@ -1,8 +1,10 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import ScrollToTop from '../UI/ScrollToTop';
 
 const Navigation = () => (
   <div className="navigation">
+    <ScrollToTop />
     <NavLink to="/" 
              className= { 
               (thisNav) => thisNav.isActive ? "nav-active" : ''} >CHARACTERS</NavLink>

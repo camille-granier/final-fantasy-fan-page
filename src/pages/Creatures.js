@@ -31,7 +31,7 @@ const Creatures = () => {
     <ul className="card-list-below-quote">
       {
       data.map((crea) => (<CardC crea={crea} 
-                                  key="crea.monsterId" 
+                                  key={crea.monsterId}
                                   url={crea.picture ? crea.picture : "./img/final-fantasy.jpg"} />))
       }
     </ul>

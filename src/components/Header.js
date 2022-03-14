@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <div className='header-container'>
             <div className='line'>
-                <p>FINAL FANTASY</p>
+                <p>FINAL FANTASY NOTES</p>
                 <div className='icons-container'>
                         <a className="icon"
                            target="_blank" 

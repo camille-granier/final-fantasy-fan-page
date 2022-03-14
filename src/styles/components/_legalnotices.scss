@@ -1,0 +1,31 @@
+.legal-notices {
+    background-color: white;
+    height: 100%;
+}
+.legal-notices-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    padding: 100px 10px 50px 10px;
+    font-family: $font-2;
+    img {
+        height: 250px;
+        width: auto;
+        object-fit: cover;
+        margin-right: 100px;
+    }
+    p {
+        font-size: 1rem;
+        max-width: 60ch;
+    }
+    h1 {
+        font-size: 1.5rem;
+        margin: 10px 0px;
+        padding: 10px 0px 40px 0px;
+    }
+    .legal-notices-text {
+        margin-left: 40px;
+    }
+}

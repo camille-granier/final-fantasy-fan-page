@@ -45,7 +45,7 @@
   margin-top: 0px;
   margin-left: 0px;
   padding: 10px 15px;
-  height: 45px;
+  height: 35px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -58,7 +58,7 @@
     margin-right: 50px;
     position: relative;
     text-decoration: none;
-    margin-bottom: 3px;
+    margin-bottom: 0px;
     &::after {
       content:"";
       width: 0%;
@@ -103,7 +103,7 @@ img {
   padding: 10px 15px;
   margin: 0px;
   width: 70px;
-  height: 45px;
+  height: 35px;
   background-color: white;
   font-family: $font-3;
 }

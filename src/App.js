@@ -7,10 +7,12 @@ import Creatures from "./pages/Creatures";
 import Games from "./pages/Games"
 import LegalNotices from "./pages/LegalNotices";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import ScrollToTop from './UI/ScrollToTop';
 
 function App() {
   return (
     <div className='app'>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={ <Home/> } />
         <Route path="/Creatures" element={ <Creatures/> } />

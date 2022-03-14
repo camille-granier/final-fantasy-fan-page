@@ -1,0 +1,17 @@
+.privacy-policy-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    font-family: $font-2;
+    max-width: 60ch;
+    p {
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+        margin: 10px;
+        padding: 30px;
+    }
+}
