@@ -8,13 +8,17 @@
     font-size: 1rem;
     text-align: center;
     background-color: $background;
-    p, a {
+    p {
         text-decoration: none;
-        padding: 0px 10px;
         color: black;
         .title-link {
             padding: 0px;
         }
+    }
+    a {
+        padding: 0 10px;
+        text-decoration: none;
+        color: black;
     }
     a:hover {
         text-decoration: underline;
@@ -30,12 +34,31 @@
      border-right: solid $grey 1px;
  }
 
-
+@media screen and (max-width: 1000px) {
+    .footer {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
+        bottom: 2%;
+    }
+}
 @media screen and (max-width: 700px) {
     .footer {
-        margin: 10px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0px;
+        padding: 5px;
+        width: auto;
+        
         p, a {
-            padding: 0px 5px;
+            font-size: .9rem;
+        }
+        p {
+            padding-right: 5px;
         }
     }
 }
