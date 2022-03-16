@@ -6,7 +6,7 @@
   margin-top: 0;
   width: 100%;
   z-index: 2;
-  border-bottom: 1px solid;
+  border-bottom: 1.4px solid;
   border-image: linear-gradient( 90deg, #e8751a, #f8da5b, #f8da5b, #e8751a)2;
   
 }
@@ -44,7 +44,8 @@
 .navigation {
   margin-top: 0px;
   margin-left: 0px;
-  padding: 10px 15px;
+  margin-bottom: 0px;
+  padding: 11px 15px;
   height: 35px;
   display: flex;
   align-items: center;
@@ -58,11 +59,10 @@
     margin-right: 50px;
     position: relative;
     text-decoration: none;
-    margin-bottom: 0px;
     &::after {
       content:"";
       width: 0%;
-      height: 2px;
+      height: 1.3px;
       background: $yellow;
       position: absolute;
       bottom: -3px;
@@ -75,7 +75,7 @@
     &::after {
       content:"";
       width: 90%;
-      height: 2px;
+      height: 1.3px;
       background: $yellow;
       position: absolute;
       bottom: -3px;
@@ -87,20 +87,20 @@
   a:hover::after {
         content:"";
         width: 90%;
-        height: 2px;
+        height: 1.3px;
         background: $yellow;
         position: absolute;
-        bottom: -3px;
+        bottom: 0px;
         left: 50%;
         transform: translateX(-50%);
-        border-radius: 2px;
+        border-radius: -3px;
         transition: 0.5s ease all;
   }
 }
 
 .logo {
 img {
-  padding: 10px 15px;
+  padding: 11px 15px;
   margin: 0px;
   width: 70px;
   height: 35px;

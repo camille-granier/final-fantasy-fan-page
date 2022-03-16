@@ -29,3 +29,12 @@
         margin-left: 40px;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .legal-notices-container {
+        img {
+            height: 100px;
+            margin: 10px;
+        }
+    }
+}
