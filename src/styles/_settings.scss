@@ -17,6 +17,7 @@ $grey2: #e3e3e3;
 $red: #dc2f2f;
 $background: #f7f7f7;
 
+
 body {
   font-size: 20px;
   margin: 107px 0px 0px 0px;
@@ -24,4 +25,15 @@ body {
   background-color: $background;
   color: $black;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    background-color: white;
+  }
+}
+@media screen and (max-height: 1850px) {
+  body {
+    background-color: white;
+  }
 }

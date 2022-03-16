@@ -7,9 +7,9 @@
     font-family: $font-2;
     font-size: 1rem;
     text-align: center;
-    background-color: $background;
     p {
         text-decoration: none;
+        padding-right: 5px;
         color: black;
         .title-link {
             padding: 0px;
@@ -36,22 +36,16 @@
 
 @media screen and (max-width: 1000px) {
     .footer {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-        width: 100%;
-        bottom: 2%;
+        
+        p {
+            padding-right: 5px;
+        }
     }
 }
 @media screen and (max-width: 700px) {
     .footer {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0px;
-        padding: 5px;
+        margin: 10px;
+        padding: 10px;
         width: auto;
         
         p, a {
