@@ -29,14 +29,13 @@
     border-right: solid $grey 1px;
 }
 
- .privacy-policy {
+ .privacy-policy-link {
      border-left: solid $grey 1px;
      border-right: solid $grey 1px;
  }
 
 @media screen and (max-width: 1000px) {
     .footer {
-        
         p {
             padding-right: 5px;
         }
