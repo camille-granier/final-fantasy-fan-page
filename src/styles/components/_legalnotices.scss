@@ -9,8 +9,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 50px auto;
-    padding: 80px 10px 50px 10px;
+    margin: 60px auto;
+    padding: 50px 10px 50px 10px;
     font-family: $font-2;
     img {
         height: 250px;
@@ -34,7 +34,7 @@
 
 @media screen and (max-width: 1280px) and (min-height: 790px) {
     .legal-notices-container {
-        margin: 90px auto 140px auto;
+        margin: 15vh auto 140px auto;
     }
 }
 
