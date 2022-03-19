@@ -1,106 +1,47 @@
 .privacy-policy {
     display: flex;
     flex-direction: column;
-    background-color: white;
-    height: 100%;
+    align-items: center;
 }
 .privacy-policy-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 50px auto;
-    padding: 80px 10px 50px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 65ch;
+    margin: 20px;
+    padding: 10px;
     font-family: $font-2;
-    img {
-        height: 250px;
-        width: auto;
-        object-fit: cover;
-        margin-right: 100px;
+    font-size: 1rem;
+    
+    h1 {
+        padding: 5px 0px;
     }
     p {
-        font-size: 1rem;
-        max-width: 60ch;
+        padding: 0px;
     }
-    h1 {
-        font-size: 1.5rem;
-        margin: 10px 0px;
-        padding: 10px 0px 40px 0px;
+    h2 {
+        padding: 5px 0px;
     }
-    .privacy-policy-text {
-        margin-left: 40px;
+    h3 {
+        padding: 5px 0px;
     }
+    ul {
+        padding: 5px 0px;
+        li {
+            list-style-type: none;
+            padding: 7px 0px;
+        }
+
+    }
+    
 }
 
-@media screen and (max-width: 1280px) and (min-height: 790px) {
-    .privacy-policy-container {
-        margin: 90px auto 140px auto;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .privacy-policy-container {
-        flex-direction: column;
-        justify-content: space-around;
-        text-align: center;
-        margin: 6vh auto 10vh auto;
-        img {
-            height: 250px;
-            margin: 10px 70px;
-        }
-        p {
-            margin: 20px 70px;
-            text-align: left;
-        }
-        .privacy-policy-text {
-            margin: 60px 70px;
-        }
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .privacy-policy-container {
-        margin: 20px;
-        margin-bottom: 5vh;
-        img {
-            height: 150px;
-            margin: 10px;
-        }
-        .privacy-policy-text {
-            margin: 20px;
-            p {
-                margin: 10px;
-            }
-        }
-    }
-}
 @media screen and (max-width: 400px) {
-    .privacy-policy-container{
-        margin: 8vh 10px;
-        margin-bottom: 8vh;
-        padding: 10px;
-        img {
-            height: 110px;
-            margin: 10px;
-        }
-        .privacy-policy-text {
-            margin: 15px;
-            p {
-                margin: 15px;
-            }
-        }
-    }
-}
-@media screen and (max-width: 1000px) and (min-height: 1300px) {
     .privacy-policy-container {
-        margin: 100px auto 20vh auto;
-        img {
-            height: 250px;
-        }
-    }
-    .privacy-policy-text {
         h1 {
-            margin: 50px;
+            font-size: 1.7rem;
         }
+        h2 {
+            font-size: 1.6rem;}
     }
 }
