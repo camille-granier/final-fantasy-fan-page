@@ -27,10 +27,12 @@ const Games = () => {
     <p className='quote-text'><em>" I don't have what it takes to make an action game. I think I'm better at telling a story "</em></p>
     </div>
     <p className='author'><span className='author-name'>-Hironobu Sakaguchi,</span> creator of the Final Fantasy series</p>
-    {isLoading && <LoadingSpinner />}
+    <div className='games-container'>
+      {isLoading && <LoadingSpinner />}
     <ul className="card-list-below-quote">
       {data.map((game) => (<CardG game={game} key={game.gameId} url={game.picture} />))}
     </ul>
+    </div>
     {!isLoading && <Footer />}
   </div>
 )};

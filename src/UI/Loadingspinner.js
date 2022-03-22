@@ -2,7 +2,8 @@ import React from 'react';
 
 const LoadingSpinner = () => {
   return (
-  <div className='loading-spinner-container'>
+  <div className='loading-spinner-container'
+        data-testid='loading'>
     <div className="lds-ripple"><div></div><div></div></div>
   </div>
 )};
