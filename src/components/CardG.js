@@ -17,7 +17,9 @@ const CardG = ({game, url}) => {
   return (
     <div className='flip-card'>
     <div className='flip-card-inner'>
-    <li className="flip-card-front" key={game.index}>
+    <li className="flip-card-front" 
+        key={game.index}
+        >
       {game.gameId === "8f24fe1b-0e23-47c3-bca1-08d712cd7324"
       ? <img className="game-picture-brave" src="../../img/ffbrave.jpg" alt="game-pic" />
       : <img className="game-picture" src={url} alt="game-pic" />}
