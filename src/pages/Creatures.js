@@ -8,17 +8,19 @@ import Footer from '../components/Footer';
 const Creatures = () => {
   const [data, setData] = useState([]);
   // eslint-disable-next-line
-  const [playOnce, setPlayOnce] = useState(true);
-  // eslint-disable-next-line
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (playOnce) {
-    axios
-        .get('https://www.moogleapi.com/api/v1/monsters')
-        .then(res => {setData(res.data)})
-        .then(res => setIsLoading(false))}
-  }, [data, playOnce]);
+    let mounted = true;
+    if (mounted) {
+    axios.get('https://www.moogleapi.com/api/v1/monsters')
+         .then((res) => {setData(res.data);
+                        setIsLoading(false)});
+         }
+        return () => {
+          mounted = false;
+        }
+  }, []);
 
   return (
   <div className="creatures">

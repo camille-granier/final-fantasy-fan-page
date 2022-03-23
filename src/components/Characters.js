@@ -8,8 +8,6 @@ import Footer from './Footer';
 const Characters = () => {
   const [data, setData] = useState([]);
   // eslint-disable-next-line
-  const [playOnce, setPlayOnce] = useState(true);
-  // eslint-disable-next-line
   const [selectedGame, setSelectedGame] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   // eslint-disable-next-line
@@ -18,16 +16,20 @@ const Characters = () => {
 
   const ChangeGame = (e) => {
     setSelectedGame(e);
-    console.log(selectedGame)
   }
 
   useEffect(() => {
-    if (playOnce) {
+    let mounted = true;
+    if (mounted) {
     axios
         .get('https://www.moogleapi.com/api/v1/characters')
-        .then(res => {setData(res.data)})
-        .then(res => setIsLoading(false))}
-  }, [data, playOnce]);
+        .then(res => {setData(res.data);
+                      setIsLoading(false)});
+        };
+        return () => {
+          mounted = false;
+        }
+  }, []);
 
   return (
   <div className="characters">

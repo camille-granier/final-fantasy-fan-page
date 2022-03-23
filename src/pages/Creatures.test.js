@@ -1,20 +1,20 @@
-import Games from './Games';
-import { BrowserRouter} from 'react-router-dom';
+import Creatures from './Creatures';
+import { BrowserRouter, } from 'react-router-dom';
 import { render, screen, waitFor } from '@testing-library/react';
 
-describe('Games component', () => {
+describe('Creatures component', () => {
 
-    test('renders games if request succeeds', async () => {
+    test('renders Creatures if request succeeds', async () => {
         window.fetch = jest.fn();
         window.fetch.mockResolvedValueOnce({
             json: async () => [{id: 'p1', title: 'First Post' }],
         });
         render(<BrowserRouter>
-                <Games/>
+                <Creatures/>
                </BrowserRouter>)
 
-        const cardGElements = await screen.findAllByRole('listitem');
-        expect(cardGElements).not.toHaveLength(0);
+        const cardCElements = await screen.findAllByRole('listitem');
+        expect(cardCElements).not.toHaveLength(0);
     });
 
     test('renders Loading Spinner only before data is loaded', async () => {
@@ -23,7 +23,7 @@ describe('Games component', () => {
             json: async () => [{id: 'p1', title: 'First Post' }],
         });
         render(<BrowserRouter>
-                <Games/>
+                <Creatures/>
                </BrowserRouter>)
             
             await waitFor(() => {
@@ -37,7 +37,7 @@ describe('Games component', () => {
             json: async () => [{id: 'p1', title: 'First Post' }],
         });
         render(<BrowserRouter>
-                <Games/>
+                <Creatures/>
                </BrowserRouter>)
             
             await waitFor(() => {
@@ -46,4 +46,3 @@ describe('Games component', () => {
     });
 
 });
-

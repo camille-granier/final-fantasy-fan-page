@@ -7,8 +7,6 @@ const MenuScroll = ({ChangeGame}) => {
     const games = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "X-2", "XII", "XIII", "XIII-2", "XV"];
     
     const [data, setData] = useState([]);
-  // eslint-disable-next-line
-  const [playOnce, setPlayOnce] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [scrollX, setScrollX] = useState(0);
   const [scrollEnd, setScrollEnd] = useState(false);
@@ -16,12 +14,18 @@ const MenuScroll = ({ChangeGame}) => {
 
 
   useEffect(() => {
-    if (playOnce) {
+    let mounted = true;
+    if (mounted) {
     axios
         .get('https://www.moogleapi.com/api/v1/games')
-        .then(res => {setData(res.data)})
-        .then(res => {setIsLoading(false)})}
-  }, [data, playOnce]);
+        .then(res => {setData(res.data);
+                      setIsLoading(false)});
+                    }
+
+        return () => {
+            mounted = false;
+        }
+  }, []);
 
   const slide = (shift) => {
     ref.current.scrollLeft += shift;
