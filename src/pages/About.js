@@ -8,12 +8,18 @@ const About = () => (
     <Header />
   <div className='about-container'>
     <div className="about">
-      <p><span className='about-background'>A react project by Camille Granier, using the wonderful <a href="https://www.moogleapi.com/"
+      <div><p><span className='about-background'>Final Fantasy Note is a fan page created by Camille Granier. It has been developped with React and is using the wonderful 
+        <a href="https://www.moogleapi.com/"
          target="_blank"
          rel='noreferrer'
          className="link"
-         >MoogleApi</a></span>.
+         > <span className='link-underline'>MoogleApi</span></a></span>.
       </p>
+      <p>The code is entirely available on 
+        <a href='https://github.com/camille-granier/final-fantasy-fan-page'
+        target="_blank"
+        rel="noreferrer"
+        className='link'> <span className='link-underline'>GitHub</span>.</a></p></div>
      </div>
     </div>
     <Contact />

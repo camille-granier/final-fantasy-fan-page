@@ -10,7 +10,7 @@
   margin: 0px;
   padding: 1vh 6vw;
   border-radius: .3rem;
-  max-width: 50vw;
+  max-width: 52vw;
   p {
     text-align: center;
     font-family: $font-2;
@@ -20,16 +20,17 @@
   color: $blue;
   font-weight: bold;
   }
-  a:hover {
-    text-decoration: underline;
-   }
   }
+}
+
+.link-underline:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 1000px) {
     .about {
       padding: .7vh 2vw;
-      max-width: 75vw;  
+      max-width: 50vw;  
     }
 }
 
