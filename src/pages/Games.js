@@ -4,6 +4,7 @@ import axios from 'axios';
 import CardG from '../components/CardG';
 import LoadingSpinner from '../UI/Loadingspinner';
 import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet';
 
 const Games = () => {
   const [data, setData] = useState([]);
@@ -25,6 +26,16 @@ const Games = () => {
 
   return (
   <div className="games">
+    <Helmet>
+      <html lang="en" />
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#000000" />
+      <meta
+        name="description"
+        content="Discover Final Fantasy Games"/>
+      <title>Games</title>
+      </Helmet>
     <Header />
     <div className='quote'>
     <p className='quote-text'><em>" I don't have what it takes to make an action game. I think I'm better at telling a story "</em></p>

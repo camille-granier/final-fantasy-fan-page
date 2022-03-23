@@ -1,10 +1,21 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Helmet from 'react-helmet';
 
 const LegalNotices = () => {
     return (
         <div className='legal-notices'>
+            <Helmet>
+                <html lang="en" />
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="theme-color" content="#000000" />
+                <meta
+                    name="description"
+                    content="Disclaimer and legal information" />
+                <title>Legal Notices</title>
+            </Helmet>
             <Header />
             <div className='legal-notices-container'>
                 <img src="./img/tomberry.jpg" alt="tomberry" />

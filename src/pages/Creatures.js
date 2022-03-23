@@ -4,6 +4,7 @@ import axios from 'axios';
 import CardC from '../components/CardC';
 import LoadingSpinner from '../UI/Loadingspinner';
 import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet';
 
 const Creatures = () => {
   const [data, setData] = useState([]);
@@ -24,6 +25,16 @@ const Creatures = () => {
 
   return (
   <div className="creatures">
+    <Helmet>
+      <html lang="en" />
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#000000" />
+      <meta
+        name="description"
+        content="Discover Final Fantasy Creatures"/>
+      <title>Creatures</title>
+      </Helmet>
     <Header />
     <div className='quote'>
     <p className='quote-text'><em>" Kweh! "</em></p>

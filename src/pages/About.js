@@ -2,9 +2,20 @@ import React from 'react';
 import Header from '../components/Header';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet';
 
 const About = () => (
   <div className='about-page'>
+    <Helmet>
+      <html lang="en" />
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#000000" />
+      <meta
+        name="description"
+        content="Find out more about our website and how to contact us"/>
+      <title>What is Final Fantasy Notes and how to get in touch</title>
+      </Helmet>
     <Header />
   <div className='about-container'>
     <div className="about">

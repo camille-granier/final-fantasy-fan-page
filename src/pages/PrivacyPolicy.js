@@ -1,10 +1,21 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet';
 
 const PrivacyPolicy = () => {
     return (
         <div className='privacy-policy'>
+            <Helmet>
+                <html lang="en" />
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="theme-color" content="#000000" />
+                <meta
+                    name="description"
+                    content="Learn more about which personal information might be collected and your fundamentals rights regarding those informations" />
+                <title>Privacy Policy</title>
+            </Helmet>
             <Header />
             <div className='privacy-policy-container'>
                 <h1>Privacy Policy</h1>

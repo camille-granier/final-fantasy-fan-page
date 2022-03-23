@@ -18,7 +18,7 @@ function App() {
         <Route path="/Creatures" element={ <Creatures/> } />
         <Route path="/Games" element={ <Games/> } />
         <Route path="/About" element={ <About/> } />
-        <Route element={ <NotFound/> } />
+        <Route path="*" element={ <NotFound/> } />
         <Route path="/LegalNotices" element={ <LegalNotices/> } />
         <Route path="/PrivacyPolicy" element={ <PrivacyPolicy/> } />
       </Routes>
