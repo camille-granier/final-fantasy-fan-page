@@ -13,7 +13,8 @@ const Card = ({char, url, des}) => {
   }
 
   return (
-  <div className="flip-card">
+  <div className="flip-card"
+        role='listitem'>
     <div className="flip-card-inner">
       <li className="flip-card-front" key={char.index}>
         <img src={url} alt="char-pic" />

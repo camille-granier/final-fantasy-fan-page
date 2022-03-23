@@ -14,7 +14,7 @@ const Games = () => {
     let mounted = true;
     if (mounted) {
     axios.get('https://www.moogleapi.com/api/v1/games')
-         .then(res => {setData(res.data);
+         .then((res) => {setData(res.data);
                       setIsLoading(false)});
          };
 

@@ -18,7 +18,7 @@ const MenuScroll = ({ChangeGame}) => {
     if (mounted) {
     axios
         .get('https://www.moogleapi.com/api/v1/games')
-        .then(res => {setData(res.data);
+        .then((res) => {setData(res.data);
                       setIsLoading(false)});
                     }
 
@@ -56,6 +56,7 @@ const MenuScroll = ({ChangeGame}) => {
                 </button>}
                 <div  ref={ref} onScroll={scrollCheck} className='button-container'>
                     <input className={isLoading ? 'loading-button' : 'game-button'}
+                            data-testid='loading-logo'
                             type="image"
                             onClick={((e) => ChangeGame(e.target.value))}
                             src="../../img/final-fantasy.jpg"  
@@ -64,6 +65,7 @@ const MenuScroll = ({ChangeGame}) => {
                     </input>
                 {data.map((game) => (
                     <input 
+                        aria-label='button'
                         className={isLoading ? 'hidden-button' : 'game-button'}
                         onClick={((e) => ChangeGame(e.target.value))}
                         key={game.gameId}

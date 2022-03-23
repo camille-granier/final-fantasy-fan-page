@@ -10,9 +10,7 @@ const Characters = () => {
   // eslint-disable-next-line
   const [selectedGame, setSelectedGame] = useState('');
   const [isLoading, setIsLoading] = useState(true);
-  // eslint-disable-next-line
-  const [isActive, setIsActive] = useState(false)
-  // eslint-disable-next-line
+ 
 
   const ChangeGame = (e) => {
     setSelectedGame(e);
@@ -23,7 +21,7 @@ const Characters = () => {
     if (mounted) {
     axios
         .get('https://www.moogleapi.com/api/v1/characters')
-        .then(res => {setData(res.data);
+        .then((res) => {setData(res.data);
                       setIsLoading(false)});
         };
         return () => {
