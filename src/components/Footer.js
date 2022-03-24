@@ -7,11 +7,11 @@ const Footer = () => {
     return (
         <div className='footer'>
             <ScrollToTop />
-            <p className='copyright'>© 2022  
+            <p className='copyright'>© 2022<span> </span> 
                 <NavLink 
                     to="/" 
                     onClick={() => window.scrollTo(0, 0)}
-                    className='title-link'> <span>Final Fantasy Notes</span>
+                    className='title-link'><span>Final Fantasy Notes</span>
                 </NavLink>
             </p>
             <NavLink 

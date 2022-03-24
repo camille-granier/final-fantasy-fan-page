@@ -28,6 +28,13 @@
     }
  }
 
+ .title-span {
+     text-decoration: none;
+ }
+ .title-span:hover {
+     text-decoration: underline;
+ }
+
  .copyright {
     border-right: solid $grey 1px;
 }
