@@ -1,7 +1,7 @@
 import LegalNotices from '../pages/LegalNotices';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
 import About from '../pages/About';
-import { screen, render, fireEvent } from '@testing-library/react';
+import { screen, render } from '@testing-library/react';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
 
