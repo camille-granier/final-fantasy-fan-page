@@ -68,6 +68,7 @@ const Contact = () => {
                       <input
                         type='text'
                         name='name'
+                        aria-label='name'
                         {...register('name', {
                           required: { 
                             value: true, 
@@ -79,25 +80,33 @@ const Contact = () => {
                         })}
                         placeholder='Name'>
                       </input>
-                      {errors.name && (<span className='error-message'>{errors.name.message}</span>)}
+                      {errors.name && (<span 
+                          data-testid="error-name" 
+                          className='error-message'>
+                            {errors.name.message}</span>)}
                     </div>
                     <div className='input-container'>
                       <input
                         type='email'
                         name='email'
+                        aria-label='email'
                         {...register('email', {
                           required: true,
                           pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
                         })}
                         placeholder='Email'>
                       </input>
-                      {errors.email && (<span className='error-message'>Please enter a valid email address</span>)}
+                      {errors.email && (<span 
+                                  className='error-message'
+                                  data-testid="error-email">
+                                    Please enter a valid email address</span>)}
                   </div>
                   </div>
                   <div className='form-line-2 input-container'>
                       <input
                         type='text'
                         name='subject'
+                        aria-label='subject'
                         {...register('subject', {
                           required: {
                             value: true,
@@ -110,18 +119,25 @@ const Contact = () => {
                         placeholder='Subject'
                         className='subject'>
                       </input>
-                      {errors.subject && (<span className='error-message'>{errors.subject.message}</span>)}
+                      {errors.subject && (<span 
+                                            className='error-message'
+                                            data-testid="error-subject">
+                                              {errors.subject.message}</span>)}
                   </div>
                   <div className='form-line-3 input-container'>
                       <textarea
                         rows={4}
                         name="message"
+                        aria-label='message'
                         {...register('message', {
                           required: true
                         })}
                         placeholder='Message'>
                       </textarea>
-                      {errors.message && (<span className='error-message error-message-textarea'>Please enter a message</span>)}
+                      {errors.message && (<span 
+                                          className='error-message error-message-textarea'
+                                          data-testid="error-message">
+                                            Please enter a message</span>)}
                   </div>
                   <button 
                     className='form-button'
