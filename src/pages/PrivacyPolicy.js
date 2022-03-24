@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
                 <p>This website uses cookies to collect anonymous statistics about visitors usage (most visited pages, amount of visitors etc). we also collect names and email-adress in the contact form, if a visitor wants to contact us.</p>
                  <p>This Privacy Policy describes our policies and procedures on the collection, use and disclosure of your personnal information when you browse our website and tells you about your privacy rights and how the law protects you.</p>
                 <p>By using this website, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
-                <h1>Definitions</h1>
+                <h2>Definitions</h2>
               <ul>
                     <li>
                         <p><strong>Cookies</strong> are small files that are placed on your computer, mobile device or any other device by a website, containing the details of your browsing history on that website among its many uses.</p>
@@ -49,8 +49,8 @@ const PrivacyPolicy = () => {
                         <p>Under GDPR (General Data Protection Regulation), you can be referred to as the Data Subject or as the user as you are the individual using the website.</p>
                     </li>
                 </ul>
-                <h1>Collecting and using your Personal Data</h1>
-                <h2>Types of Data Collected</h2>
+                <h2>Collecting and using your Personal Data</h2>
+                <h3>Types of Data Collected</h3>
                 <h3>Personal Data</h3>
                 <p>While using our website, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information include:</p>
                 <ul>
@@ -96,7 +96,7 @@ const PrivacyPolicy = () => {
                 <h2>Retention of your Personal Data</h2>
                 <p>we can retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. we will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws).</p>
                 <p>we will also retain usage Data for internal analysis purposes. usage Data is generally retained for a shorter period of time.</p>
-                <h1>GDPR Privacy</h1>
+                <h2>GDPR Privacy</h2>
                 <h2>your Rights under the GDPR</h2>
                 <p>we undertake to respect the confidentiality of your Personal Data and to guarantee you can exercise your rights.</p>
                 <p>you have the right under this Privacy Policy, and by law if you are within the EU, to:</p>
@@ -110,17 +110,17 @@ const PrivacyPolicy = () => {
                 <h2>Exercising of your GDPR Data Protection Rights</h2>
                 <p>you may exercise your rights of access, rectification, cancellation and opposition by contacting us. Please note that we may ask you to verify your identity before responding to such requests. If you make a request, we will try our best to respond to you as soon as possible.</p>
                 <p>you have the right to complain to a Data Protection Authority about our collection and use of your Personal Data. For more information, if you are in the European Economic Area (EEA), please contact your local data protection authority in the EEA.</p>
-                <h1>Children's Privacy</h1>
+                <h2>Children's Privacy</h2>
                 <p>our website does not address anyone under the age of 13. we do not knowingly collect personally identifiable information from anyone under the age of 13. If you are a parent or guardian and you are aware that your child has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from anyone under the age of 13 without verification of parental consent, we take steps to remove that information from our servers.</p>
                 <p>If we need to rely on consent as a legal basis for processing your information and your country requires consent from a parent, we may require your parent's consent before we collect and use that information.</p>
-                <h1>Links to Other websites</h1>
+                <h2>Links to Other websites</h2>
                 <p>our website may contain links to other websites that are not operated by us. If you click on a third party link, you will be directed to that third party's site. we strongly advise you to review the Privacy Policy of every site you visit.</p>
                 <p>we have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or websites.</p>
-                <h1>Changes to this Privacy Policy</h1>
+                <h2>Changes to this Privacy Policy</h2>
                 <p>we may update our Privacy Policy from time to time. we will notify you of any changes by posting the new Privacy Policy on this page.</p>
                 <p>we will let you know via email and/or a prominent notice on our website, prior to the change becoming effective and update the &quot;Last updated&quot; date at the top of this Privacy Policy.</p>
                 <p>you are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
-                <h1>Contact us</h1>
+                <h2>Contact us</h2>
                 <p>If you have any questions about this Privacy Policy, you can contact us:</p>
                 <ul>
                     <li>By email: granierc@protonmail.com</li>

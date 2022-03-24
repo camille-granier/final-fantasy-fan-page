@@ -57,7 +57,7 @@ const Contact = () => {
         <div className='contact-form'>
           <div className='form-container'>
               <div className='form-header'>
-                <h2>Get in touch</h2>
+                <h1>Get in touch</h1>
                 <img 
                   src="./img/moogle-mail.jpg"
                   alt="moogle"/>
