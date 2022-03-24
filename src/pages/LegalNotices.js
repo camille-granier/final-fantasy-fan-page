@@ -17,7 +17,8 @@ const LegalNotices = () => {
                 <title>Legal Notices</title>
             </Helmet>
             <Header />
-            <div className='legal-notices-container'>
+            <div 
+            className='legal-notices-container'>
                 <img src="./img/tomberry.jpg" alt="tomberry" />
                 <div className='legal-notices-text'><h1>Legal Notices</h1>
                     <p>Final Fantasy Notes is a fan-made website. It is a personnal project made for fans to enjoy information about the games, and isn't for commercial use.</p>

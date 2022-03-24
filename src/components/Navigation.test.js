@@ -35,5 +35,4 @@ describe('Testing Navigation component', () => {
                 const cam = await screen.findByText(/Camille Granier/i)
                 expect(cam).toBeInTheDocument();
     });
-
 });
