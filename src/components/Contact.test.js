@@ -1,8 +1,9 @@
 import Contact from './Contact';
-import { screen, render } from '@testing-library/react';
+import { screen, render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/react';
 import { act } from 'react-dom/test-utils';
+
 
 describe('Testing Contact Form', () => {
     test('should render the basic fields', () => {
@@ -102,5 +103,6 @@ describe('Testing Contact Form', () => {
         })
 
         expect(screen.queryByTestId('error-message')).toBeTruthy();
-    })
+    });
+
 })

@@ -17,7 +17,7 @@ const Contact = () => {
   const toastifySuccess = () => {
     toast('Form sent!', {
       position: 'bottom-right',
-      autoClose: 5000,
+      autoClose: 10000,
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,  
@@ -142,7 +142,7 @@ const Contact = () => {
                   <button 
                     className='form-button'
                     type='submit'
-                    >Submit
+                    >Submit 
                   </button>
               </form>
             </div>
