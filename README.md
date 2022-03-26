@@ -9,6 +9,7 @@ This is one of my first project with React so it was meant mainly for me to lear
 ## Navigation
 
 You will find 3 main sections, characters, games and creatures. The last one is an about page with contact form. 
+
 On the first page, you can select characters from a specific game with the horizontal scroll menu. I didn't use this menu in the other two sections as there is a small amount of data for now.
 
 ## Technologies
