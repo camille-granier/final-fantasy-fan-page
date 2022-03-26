@@ -15,4 +15,4 @@ On the first page, you can select characters from a specific game with the horiz
 
 The technologies I used among others include Sass, react-icons, Helmet for better SEO and emailjs to receive contact messages directly to my email address. 
 
-I also used some React packages like React-router-dom for routing, react-hook-form for the contact form and Jest and react-testing-library for testing.
+I also used some React packages like React-router-dom for routing, react-hook-form and react-toastify for the contact form and Jest and react-testing-library for testing.
